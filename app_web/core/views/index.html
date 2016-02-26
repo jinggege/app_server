@@ -22,10 +22,13 @@
 				<li>
 					<div class='room-info'>
 						<div class='room-icon'></div>
-						<div class='room-pcount'>{{roomInfo.pCount}}</div>
-							<div class='room-add' roomId={{roomInfo.roomId}}>
-                                <a href="addroom?room={{roomInfo.roomId}}">加入</a>
-                            </div>
+						<div class='room-pcount'>
+                            <span>{{roomInfo.pCount}}</span>
+                            <span>roomid:{{roomInfo.roomId}}</span>
+                        </div>
+						<div class='room-add' roomId={{roomInfo.roomId}}>
+                            <a href="addroom?room={{roomInfo.roomId}}">加入</a>
+                        </div>
 					</div>
 				</li>
 				

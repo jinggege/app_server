@@ -36,8 +36,8 @@
       <file leaf-file-name="g_room.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app_static/static/css/g_room.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5651376" vertical-offset="0" max-vertical-offset="616">
-              <caret line="14" column="74" selection-start-line="14" selection-start-column="74" selection-end-line="14" selection-end-column="74" />
+            <state vertical-scroll-proportion="0.4440367" vertical-offset="66" max-vertical-offset="770">
+              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -46,8 +46,8 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_web/core/views/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.967742" vertical-offset="330" max-vertical-offset="1078">
-              <caret line="22" column="41" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="41" />
+            <state vertical-scroll-proportion="-8.5161295" vertical-offset="264" max-vertical-offset="1144">
+              <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -72,13 +72,13 @@
         <option value="$PROJECT_DIR$/app_web/core/views/roomtest.html" />
         <option value="$PROJECT_DIR$/app_static/static/js/moduleconfig.js" />
         <option value="$PROJECT_DIR$/app_web/core/views/base.html" />
-        <option value="$PROJECT_DIR$/app_web/core/views/index.html" />
         <option value="$PROJECT_DIR$/app_web/core/controls/roomcontrol.js" />
         <option value="$PROJECT_DIR$/app_web/core/controls/c_index.js" />
         <option value="$PROJECT_DIR$/app_web/core/data/d_manage.js" />
         <option value="$PROJECT_DIR$/app_web/core/controls/c_manage.js" />
         <option value="$PROJECT_DIR$/app_web/app.js" />
         <option value="$PROJECT_DIR$/app_web/core/controls/c_addroom.js" />
+        <option value="$PROJECT_DIR$/app_web/core/views/index.html" />
         <option value="$PROJECT_DIR$/app_static/static/css/g_room.css" />
       </list>
     </option>
@@ -265,6 +265,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="imgs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app_server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app_server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app_static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -286,6 +308,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\project\laifeng\ddshow-demo\today\app_server\app_static\static\imgs" />
       <recent name="D:\project\laifeng\ddshow-demo\today\app_server\app_static\static\js" />
       <recent name="D:\project\laifeng\ddshow-demo\today\app_server\app_static\lib" />
       <recent name="D:\project\laifeng\ddshow-demo\today\app_server\app_web" />
@@ -545,16 +568,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app_web/core/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.967742" vertical-offset="330" max-vertical-offset="1078">
-          <caret line="22" column="41" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="41" />
+        <state vertical-scroll-proportion="-8.5161295" vertical-offset="264" max-vertical-offset="1144">
+          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app_static/static/css/g_room.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5651376" vertical-offset="0" max-vertical-offset="616">
-          <caret line="14" column="74" selection-start-line="14" selection-start-column="74" selection-end-line="14" selection-end-column="74" />
+        <state vertical-scroll-proportion="0.4440367" vertical-offset="66" max-vertical-offset="770">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
           <folding />
         </state>
       </provider>

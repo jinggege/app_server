@@ -12,8 +12,15 @@ li,a{list-style:none;text-decoration: none;}
     background-color:#DDDDDD;
 }
 
-.room-info .room-icon{width:48px; height:48px;float:left; margin:1px 1px;background-color: #cccccc;}
-.room-info .room-pcount{width:50px; height:25px; line-height:25px; background-color:#CCCCCC; text-align:center;float:left;}
+.room-info .room-icon{
+    width:48px; height:48px;float:left; margin:1px 1px;background-color: #cccccc;
+    background:url('http://10.155.11.94/static/imgs/38.jpg') no-repeat;
+}
+.room-info .room-pcount{width:50px; height:50px; float:left;}
+
+.room-info span{display:block; width: 45px;height: 25px;line-height: 25px;margin: auto 2px;}
+
+
 .room-info .room-add{
     width:50px; height:50px; line-height:25px; font-size:12px;
     text-align:center; cursor:pointer;float:right;
