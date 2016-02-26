@@ -82,8 +82,8 @@
         <option value="$PROJECT_DIR$/app_web/core/controls/c_manage.js" />
         <option value="$PROJECT_DIR$/app_web/core/controls/c_index.js" />
         <option value="$PROJECT_DIR$/app_web/core/controls/c_addroom.js" />
-        <option value="$PROJECT_DIR$/app_web/app.js" />
         <option value="$PROJECT_DIR$/app_web/core/data/d_manage.js" />
+        <option value="$PROJECT_DIR$/app_web/app.js" />
       </list>
     </option>
   </component>
