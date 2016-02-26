@@ -1,0 +1,64 @@
+<html>
+<head>
+  <title>{{desc}}</title>
+  {% include "base.html" %}
+  
+  <style>
+		.container{width:1000px;height:600px;}
+		.container .room-info{float:left; width:50px;height:100px; background-color:#DDDDDD; margin:0 5px;}
+		.room-info .room-icon{widht:50px; height:50px;}
+		.room-info .room-pcount{width:50px; height:25px; line-height:25px; background-color:#CCCCCC; text-align:center;}
+		.room-info .room-add{width:50px; height:50px; line-height:25px; font-size:12px; backound-color:#BBBBBB; text-align:center; cursor:pointer;}
+		
+	</style>
+	
+	<!-- <script type="text/javascript"  src="http://10.155.11.94/pages/mj/ga/lib/jquery.js"></script> -->
+	<script type="text/javascript" src="http://10.155.11.94/pages/mj/ga/lib/sea.js"></script>
+    <script type="text/javascript" src="http://10.155.11.94/pages/mj/ga/static/js/moduleconfig.js"></script>
+	
+</head>
+
+<body onload="domCompleted()">
+	
+	<div class="container">
+		<ul>
+			{% for roomInfo in roomList %}
+				<li>
+					<div class='room-info'>
+						<div class='room-icon'></div>
+						<div class='room-pcount'>{{roomInfo.pCount}}</div>
+						<a href="room?room={{roomInfo.roomId}}">
+							<div class='room-add' roomId={{roomInfo.roomId}}>加入</div>
+						</a>
+					</div>
+				</li>
+				
+			{% endfor %}
+		</ul>
+	
+	</div>
+	
+	
+	<script type="text/javascript">
+	
+		function domCompleted(){
+			seajs.use('JQ',function($){
+				$(".room-add").on("click",function(event){
+					var roomId = $(event.target).attr("roomId");
+					console.log(roomId);
+					/*
+					$.get("room",function(data,status){
+						console.log(data,status);
+					});
+					*/
+				});
+			});
+
+			
+		}
+		
+	</script>
+	
+	
+</body>
+</html>
