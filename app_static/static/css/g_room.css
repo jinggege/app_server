@@ -2,7 +2,6 @@ html,body{margin:0;padding:0;background-color:#FFFFFF;font-family:\5FAE\8F6F\96C
 div{margin:0; padding:0; display:block;}
 ul{margin:0; padding:0;}
 li,a{list-style:none;text-decoration: none;}
-
 .container{width:1000px;height:600px;}
 .container li{width:240px;height:50px;line-height: 50px; display: block;}
 .container .room-info{
@@ -11,14 +10,14 @@ li,a{list-style:none;text-decoration: none;}
     border-radius: 2px 2px 2px 2px;
     background-color:#f2f9fc;
 }
-
 .room-info .room-icon{
     width:48px; height:48px;float:left; margin:1px 1px;background-color: #cccccc;
     background:url('http://10.155.11.94/static/imgs/38.jpg') no-repeat;
+    border-radius:2px 2px 2px 2px;
 }
 .room-info .room-pcount{width:50px; height:50px; float:left;}
 
-.room-info span{display:block; width: 45px;height: 25px;line-height: 25px;margin: auto 2px;}
+.room-info span{display:block; width: 45px;height: 25px;line-height: 25px;margin: auto 2px; font-size: 10px;}
 
 
 .room-info .room-add{
@@ -26,4 +25,7 @@ li,a{list-style:none;text-decoration: none;}
     text-align:center; cursor:pointer;float:right;
 }
 
-.room-add a{display: block;line-height: 50px;font-size: 14px;font-weight: bold; cursor: pointer;}
+.room-add a{
+    display: block;line-height: 50px;font-size: 14px;
+    font-weight: bold; cursor: pointer;color:#000000;
+}

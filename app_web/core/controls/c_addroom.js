@@ -13,6 +13,13 @@ C_ADDROOM.prototype = {
         var cUrl   = this.request.url;
         var arg    = url.parse(cUrl, true).query;
         var roomId = arg.room;
+
+        var roomItem = instance.getRoomInfoById(roomId);
+        if(roomItem.currCount>= roomItem.maxCount){
+            this.body = yield render('roomfull', {});
+            return;
+        }
+
         d_manage.updataRoomListByRoomId(roomId);
 
         var renderData = {};
@@ -22,9 +29,18 @@ C_ADDROOM.prototype = {
         this.body = yield render('roomtest', renderData);
     },
 
-    checkRoomStatus:function(){
-        console.log("room status");
+    getRoomInfoById:function(roomId){
+        var roomList = d_manage.getRoomList();
+        var roomItem = null;
+        for(var i=0; i<roomList.length; i++){
+            roomItem = roomList[i];
+            if(roomItem.roomId == roomId){
+                return roomItem
+            }
+
+        }//end for
     }
+
 
 };
 
