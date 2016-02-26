@@ -13,7 +13,11 @@ var C_INDEX = function(){};
 var instance = null;
 C_INDEX.prototype = {
     getControl:function*(){
-        this.body = yield render('index', {desc:"Room List",author:'demo',roomList:d_manage.getRoomList() });
+        var renderData = {};
+        renderData.desc = "Room List";
+        renderData.roomList = d_manage.getRoomList();
+        renderData.STATIC_DOMAIN = global.appConfig.app_static_domain;
+        this.body = yield render('index', renderData);
     },
 
     checkRoomStatus:function(){

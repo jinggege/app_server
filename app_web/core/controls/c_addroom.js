@@ -14,7 +14,12 @@ C_ADDROOM.prototype = {
         var arg    = url.parse(cUrl, true).query;
         var roomId = arg.room;
         d_manage.updataRoomListByRoomId(roomId);
-        this.body = yield render('roomtest', {roomId:roomId});
+
+        var renderData = {};
+        renderData.roomId = roomId;
+        renderData.STATIC_DOMAIN = global.appConfig.app_static_domain;
+
+        this.body = yield render('roomtest', renderData);
     },
 
     checkRoomStatus:function(){

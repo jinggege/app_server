@@ -2,6 +2,7 @@
 var rootUrl = __dirname;
 global.rootUrl = rootUrl+'/core';
 
+var config = require('./appconfig.js');
 var url    = require('url');
 var koa    = require('koa');
 var logger = require('koa-logger');
@@ -16,10 +17,11 @@ app.use(logger());
 start();
 
 function start(){
+    global.appConfig = config;
     d_manage.start();
     c_manage.start(app);
 }
 
 
-app.listen(3001);
-trace(["app start on port 3001"]);
+app.listen(config.app_web_port);
+trace(["app start on port "+config.app_web_port]);
