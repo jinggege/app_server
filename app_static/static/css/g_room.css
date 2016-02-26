@@ -1,15 +1,15 @@
-html,body{margin:0;padding:0;background-color:#FFFFFF;}
+html,body{margin:0;padding:0;background-color:#FFFFFF;font-family:\5FAE\8F6F\96C5\9ED1,arial,\5b8b\4f53;}
 div{margin:0; padding:0; display:block;}
 ul{margin:0; padding:0;}
 li,a{list-style:none;text-decoration: none;}
 
 .container{width:1000px;height:600px;}
-.container li{width:200px;height:50px;line-height: 50px; display: block;}
+.container li{width:240px;height:50px;line-height: 50px; display: block;}
 .container .room-info{
-    width:200px;height:50px; margin:3px 0;
-    border: 1px solid #cccccc;
+    width:240px;height:50px; margin:5px 0;
+    border: 1px solid #c9e6f2;
     border-radius: 2px 2px 2px 2px;
-    background-color:#DDDDDD;
+    background-color:#f2f9fc;
 }
 
 .room-info .room-icon{
