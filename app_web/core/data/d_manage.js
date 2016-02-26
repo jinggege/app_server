@@ -41,6 +41,20 @@ D_MANAGE.prototype = {
         }
 
         global.roomList = baseRoomList;
+    },
+
+    roomIsFull: function (roomId) {
+        var roomList = this.getRoomList();
+        var roomItem = null;
+        for(var i=0; i<roomList.length; i++){
+            roomItem = roomList[i];
+            if(roomItem.roomId == roomId){
+                return roomItem.currCount >= roomItem.maxCount;
+            }
+
+        }//end for
+
+        return false;
     }
 
 };

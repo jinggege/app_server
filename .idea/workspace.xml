@@ -33,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="c_addroom.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="c_addroom.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app_web/core/controls/c_addroom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="132" max-vertical-offset="1342">
-              <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.3316583" vertical-offset="0" max-vertical-offset="1078">
+              <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
               </folding>
@@ -45,21 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="roomfull.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_web/core/views/roomfull.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.5161295" vertical-offset="0" max-vertical-offset="396">
-              <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="d_manage.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="d_manage.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_web/core/data/d_manage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.07370184" vertical-offset="352" max-vertical-offset="1232">
-              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="723" max-vertical-offset="1540">
+              <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -84,7 +74,6 @@
         <option value="$PROJECT_DIR$/app_static/static/js/moduleconfig.js" />
         <option value="$PROJECT_DIR$/app_web/core/views/base.html" />
         <option value="$PROJECT_DIR$/app_web/core/controls/roomcontrol.js" />
-        <option value="$PROJECT_DIR$/app_web/core/data/d_manage.js" />
         <option value="$PROJECT_DIR$/app_web/core/controls/c_manage.js" />
         <option value="$PROJECT_DIR$/app_web/appconfig.js" />
         <option value="$PROJECT_DIR$/app_web/app.js" />
@@ -92,8 +81,9 @@
         <option value="$PROJECT_DIR$/app_web/core/views/index.html" />
         <option value="$PROJECT_DIR$/app_web/core/views/roomtest.html" />
         <option value="$PROJECT_DIR$/app_static/static/css/g_room.css" />
-        <option value="$PROJECT_DIR$/app_web/core/controls/c_addroom.js" />
         <option value="$PROJECT_DIR$/app_web/core/views/roomfull.html" />
+        <option value="$PROJECT_DIR$/app_web/core/data/d_manage.js" />
+        <option value="$PROJECT_DIR$/app_web/core/controls/c_addroom.js" />
       </list>
     </option>
   </component>
@@ -505,19 +495,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_web/core/controls/c_addroom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="132" max-vertical-offset="1342">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_web/core/views/roomfull.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5161295" vertical-offset="0" max-vertical-offset="396">
+        <state vertical-scroll-proportion="0.46643108" vertical-offset="0" max-vertical-offset="566">
           <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
           <folding />
         </state>
@@ -525,9 +505,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app_web/core/data/d_manage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.07370184" vertical-offset="352" max-vertical-offset="1232">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="723" max-vertical-offset="1540">
+          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_web/core/controls/c_addroom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3316583" vertical-offset="0" max-vertical-offset="1078">
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
