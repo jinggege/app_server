@@ -2,11 +2,11 @@
  * Created by dell on 2016/2/26.
  */
 var basePath = __dirname;
-var http = require("http");
-var path = require("path");
-var fs   = require("fs");
-var url  = require("url");
-var mine = require(basePath+"/lib/mine.js");
+var http  = require("http");
+var path  = require("path");
+var fs    = require("fs");
+var url   = require("url");
+var mine  = require(basePath+"/lib/mine.js");
 var trace = require(basePath+"/lib/trace.js");
 
 http.createServer(function(request,response){
