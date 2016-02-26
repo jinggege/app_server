@@ -6,11 +6,11 @@ var url    = require('url');
 var koa    = require('koa');
 var logger = require('koa-logger');
 
-var trace = require(global.rootUrl+'/lib/trace.js');
+var trace    = require(global.rootUrl+'/lib/trace.js');
 var c_manage = require(global.rootUrl+'/controls/c_manage.js');
 var d_manage = require(global.rootUrl+'/data/d_manage.js');
 
-var app        = koa();
+var app      = koa();
 app.use(logger());
 
 start();

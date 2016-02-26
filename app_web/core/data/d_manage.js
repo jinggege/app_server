@@ -1,5 +1,6 @@
 /**
  * Created by dell on 2016/2/26.
+ * 全局数据管理类
  */
 var D_MANAGE = function(){};
 

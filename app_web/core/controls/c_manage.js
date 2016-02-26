@@ -1,10 +1,7 @@
 /**
  * Created by dell on 2016/2/26.
  */
-/**
- * Created by dell on 2016/2/26.
- */
-var route  = require('koa-route');
+var route     = require('koa-route');
 var c_index   = require(global.rootUrl+'/controls/c_index.js');
 var c_addroom = require(global.rootUrl+'/controls/c_addroom.js');
 
