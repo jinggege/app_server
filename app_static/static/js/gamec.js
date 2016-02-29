@@ -38,12 +38,29 @@ define(function(require,exports,module){
                 $.get(
                     "http://10.155.11.94:3001/getRoomStatus?roomId="+roomConfig.roomId+"&action=getUserInfo",
                     function(data,status){
-                        console.log(status,data);
+                        var resObj = $.parseJSON(data);
+                        _this.setUserInfo(resObj.respone.data);
                     }
                 )
 
             },2000);
+        },
+
+        setUserInfo:function(userList){
+            var html = '<ul>';
+            var uInfo = null;
+            for(var i=0; i<userList.length; i++){
+                uInfo = userList[i];
+                html += '<li class="user-info">';
+                html += '<div class="u-"'+uInfo.order+'>'+'uid:'+uInfo.uId+'</div>';
+                html += '</li>';
+            }
+            html +='</ul>';
+
+            $("#game-info").html(html);
         }
+
+
 
 
 

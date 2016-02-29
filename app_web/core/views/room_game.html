@@ -9,8 +9,10 @@
     <style type="text/css">
       html,body,div{margin: 0; padding: 0;}
       table{margin: 0; padding: 0;}
+      li{text-decoration: none;}
+      ul li{margin: 0;padding: 0;}
       .root{width: 1000px;height: 600px;}
-      .game-container{width: 550px; height: 590px; background-color: #DDDDDD;margin: 0 auto;}
+      .game-container{width: 550px; height: 590px; background-color: #DDDDDD;margin: 0;float: left;}
       .game-panel{width:550px; height:550px; }
       .game-panel .grid{width:50px;height:50px;}
       .game-panel .grid{border: solid 1px;   border-color: #FFFFFF;}
@@ -20,7 +22,10 @@
       .grid .piece-me{width:48px;height:48px;border-radius: 25px 25px 25px 25px;background-color: #FFFFFF;}
       .grid .piece-other{width:48px;height:48px;border-radius: 25px 25px 25px 25px;background-color: #000000;}
 
-      .game-info{width:200px; height:200px; background-color: #cccccc;}
+      .game-info{width:200px; height:200px; background-color: #cccccc;float: left;font-size: 14px;font-weight: bold;}
+
+      .game-info .u1{color:#FFFFFF;}
+      .game-info .u2{color:#000000;}
 
 
     </style>
@@ -42,7 +47,7 @@
         <div class="game-container" id="game-container">
 
         </div>
-        <div class="game-info">
+        <div class="game-info" id="game-info">
 
         </div>
 

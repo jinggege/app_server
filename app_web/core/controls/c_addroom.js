@@ -20,7 +20,12 @@ C_ADDROOM.prototype = {
             return;
         }
 
-        //检测是否已加入room，是否重复加入同一
+        /**
+         *防止重复加入room
+         * 同一uid 加入同一room            ok
+         * 同一ip& 同一uid  加入同一room   no
+         *
+         */
         var userInfo = d_manage.getUserInfo(uId);
         if(userInfo == undefined){
             d_manage.joinRoom(roomId,uId);
@@ -32,7 +37,6 @@ C_ADDROOM.prototype = {
             }
         }
 
-        console.log(d_manage.getRoomInfoById(roomId));
 
         var renderData = {};
         renderData.roomId = roomId;
