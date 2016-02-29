@@ -4,6 +4,7 @@
 var route     = require('koa-route');
 var c_index   = require(global.rootUrl+'/controls/c_index.js');
 var c_addroom = require(global.rootUrl+'/controls/c_addroom.js');
+var c_room = require(global.rootUrl+'/controls/c_room.js');
 
 
 var C_MANAGE = function(){};
@@ -19,6 +20,7 @@ C_MANAGE.prototype = {
         this.addControlToList("c_index","/",c_index.getControl);
         this.addControlToList("c_index","/index",c_index.getControl);
         this.addControlToList("c_addroom","/addroom",c_addroom.getControl);
+        this.addControlToList("c_room","/getRoomStatus",c_room.getControl);
 
        for(var i=0; i<controlList.length; i++){
            var obj = controlList[i];

@@ -5,6 +5,8 @@ define(function(require,exports,module){
     var $=require("JQ");
     var gv=require("./gamev.js");
 
+    var roomConfig = window.config.roomConfig;
+
     var GC=function(){
         this.view = null;
         _this = this;
@@ -14,6 +16,7 @@ define(function(require,exports,module){
         init:function(){
             this.view = new gv();
             this.view.init(this.clickGridEvent);
+            this.startTick();
         },
         clickGridEvent:function(data){
             console.log(_this.view.getGrid());
@@ -29,7 +32,19 @@ define(function(require,exports,module){
 
         resetGrid:function(){
             _this.view.resetGrid();
+        },
+        startTick:function(){
+            var ticker = setInterval(function(){
+                $.get(
+                    "http://10.155.11.94:3001/getRoomStatus?roomId="+roomConfig.roomId+"&action=getUserInfo",
+                    function(data,status){
+                        console.log(status,data);
+                    }
+                )
+
+            },2000);
         }
+
 
 
 

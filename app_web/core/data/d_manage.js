@@ -9,6 +9,7 @@ var instance = null;
 D_MANAGE.prototype = {
     start:function(){
         this.initRoomList();
+        this.initUserInfo();
     },
     initRoomList:function(){
         var list = [];
@@ -28,9 +29,8 @@ D_MANAGE.prototype = {
 
     initUserInfo:function(){
         var userList = {};
-       // userList[uId] = {uId:xx,uName:xxx,color:#000000,order:1};
-
-        gloabl.userList = userList;
+      // userList[0] = {uId:0,uName:"",color:#000000,order:1,roomId:xxx};
+        global.userList = userList;
 
     },
     getRoomList:function(){
@@ -69,9 +69,7 @@ D_MANAGE.prototype = {
             if(roomItem.roomId == roomId){
                 return roomItem.currCount >= roomItem.maxCount;
             }
-
         }//end for
-
         return false;
     },
     getRoomInfoById:function(roomId){

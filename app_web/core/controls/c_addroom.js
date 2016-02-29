@@ -20,7 +20,17 @@ C_ADDROOM.prototype = {
             return;
         }
 
-        d_manage.joinRoom(roomId,uId);
+        //检测是否已加入room，是否重复加入同一
+        var userInfo = d_manage.getUserInfo(uId);
+        if(userInfo == undefined){
+            d_manage.joinRoom(roomId,uId);
+        }else{
+            if(userInfo.uId == null || userInfo.uId == undefined){
+                if(userInfo.roomId != roomId){
+                    d_manage.joinRoom(roomId,uId);
+                }
+            }
+        }
 
         console.log(d_manage.getRoomInfoById(roomId));
 
