@@ -102,12 +102,12 @@ D_MANAGE.prototype = {
         global.userList[uId].step = step;
     },
     getUserByOrder:function(order){
-        var baseRoomList = global.roomList;
-        var roomItem = null;
-        for(var i=0; i<baseRoomList.length; i++){
-            roomItem = baseRoomList[i];
-            if(roomItem.order == order){
-                return roomItem;
+        var userList = global.userList;
+        var uItem = null;
+        for(var i=0; i<userList.length; i++){
+            uItem = userList[i];
+            if(uItem.order == order){
+                return uItem;
             }
         }//END FOR
     }

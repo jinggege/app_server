@@ -54,8 +54,9 @@ C_ROOM.prototype = {
                 var step = args.hasOwnProperty("step")? args.step : 0;
                 var activeId = args.hasOwnProperty("activeId")? args.activeId : -1;
 
-                if(d_manage.roomIsFull() && stepInfo.step==0){
-                    activeId = d_manage.getUserByOrder(1).uId;
+                if(d_manage.roomIsFull(roomId) && stepInfo.step==0){
+                    console.log(d_manage.getUserByOrder(1));
+                    //activeId = d_manage.getUserByOrder(1).uId;
                 }
 
                 stepInfo.uId = uId;

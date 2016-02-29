@@ -10,6 +10,7 @@ define(function(require,exports,module){
 
     var mapList = null;
     var uList = null;
+    var step = 0;
 
 
     var GC=function(){
@@ -25,12 +26,17 @@ define(function(require,exports,module){
             this.startTick();
         },
         clickGridEvent:function(data){
+            step++;
             var type   = data.type;
             var row    = data.data.row;
             var col    = data.data.col;
             mapList[row][col] = 1;
             var idStr = "#"+row+"-"+col;
             $(idStr).addClass("piece-me");
+
+            var baseUrl = "http://10.155.11.94:3001/getRoomStatus?roomId="+roomConfig.roomId+"&uId="+userConfig.uId;
+            baseUrl+= baseUrl+"&action=getStepInfo"+"&active="+_this.getOther().uId+"&step="+step;
+            $.get(baseUrl,_this.sendStep)
 
         },
 
@@ -87,15 +93,12 @@ define(function(require,exports,module){
         getStepInfo:function(data,status){
             var resObj = $.parseJSON(data);
             var stepInfo = resObj.response.stepInfo;
-
+            console.log(stepInfo.activeId,_this.getMe().uId,stepInfo.activeId == _this.getMe().uId);
             if(stepInfo.activeId == _this.getMe().uId){
-                $("#g-mask").css("display","block");
-            }else{
                 $("#g-mask").css("display","none");
+            }else{
+                $("#g-mask").css("display","block");
             }
-
-
-            console.log(resObj);
         },
         getMe:function(){
             for(var i=0; i<uList.length; i++){
@@ -103,6 +106,17 @@ define(function(require,exports,module){
                     return uList[i];
                 }
             }
+        },
+
+        getOther:function(){
+            for(var i=0; i<uList.length; i++){
+                if(userConfig.uId != uList[i].uId){
+                    return uList[i];
+                }
+            }
+        },
+        sendStep:function(data,status){
+
         }
 
 
