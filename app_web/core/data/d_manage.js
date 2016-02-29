@@ -15,27 +15,45 @@ D_MANAGE.prototype = {
         for(var i=0; i<5; i++){
             var roomObj = {};
             roomObj.roomId = i;
+            roomObj.name = "room_"+i;
             roomObj.maxCount = 2;
             roomObj.currCount = 0;
-
+            roomObj.u1Id = -1;
+            roomObj.u2Id = -1;
             roomObj.pCount = String(roomObj.currCount)+"/"+String(roomObj.maxCount);
             list.push(roomObj);
         }
         global.roomList = list;
     },
 
+    initUserInfo:function(){
+        var userList = {};
+       // userList[uId] = {uId:xx,uName:xxx,color:#000000,order:1};
+
+        gloabl.userList = userList;
+
+    },
     getRoomList:function(){
         return global.roomList;
     },
 
-    updataRoomListByRoomId:function(roomId){
+    joinRoom:function(roomId,uId){
         var baseRoomList = global.roomList;
         var roomItem = null;
         for(var i=0; i<baseRoomList.length; i++){
             roomItem = baseRoomList[i];
             if(roomItem.roomId == roomId){
+
+                if(roomItem.u1Id == -1){
+                    roomItem.u1Id = uId;
+                    this.setUserInfo(uId,1,'#FFFFFF');
+                }else{
+                    roomItem.u2Id = uId;
+                    this.setUserInfo(uId,2,'#000000');
+                }
+
                 baseRoomList[i].currCount +=1;
-                baseRoomList[i].pCount =String(baseRoomList[i].currCount)+"/"+String(baseRoomList[i].maxCount)
+                baseRoomList[i].pCount =String(baseRoomList[i].currCount)+"/"+String(baseRoomList[i].maxCount);
                 return;
             }
         }
@@ -55,6 +73,25 @@ D_MANAGE.prototype = {
         }//end for
 
         return false;
+    },
+    getRoomInfoById:function(roomId){
+        var baseRoomList = global.roomList;
+        var roomItem = null;
+        for(var i=0; i<baseRoomList.length; i++){
+            roomItem = baseRoomList[i];
+            if(roomItem.roomId == roomId){
+                return roomItem;
+            }
+        }//END FOR
+
+    },
+    setUserInfo:function(uId,order,color){
+        global.userList[uId] = {uId:uId,order:order,color:color};
+    },
+
+    getUserInfo:function(uId){
+        var userList = global.userList;
+        return userList[uId];
     }
 
 };

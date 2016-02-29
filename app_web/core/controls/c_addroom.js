@@ -13,33 +13,24 @@ C_ADDROOM.prototype = {
         var cUrl   = this.request.url;
         var arg    = url.parse(cUrl, true).query;
         var roomId = arg.room;
+        var uId    = arg.uId;
 
-        var roomItem = instance.getRoomInfoById(roomId);
-        if(roomItem.currCount>= roomItem.maxCount){
+        if(d_manage.roomIsFull(roomId)){
             this.body = yield render('roomfull', {});
             return;
         }
 
-        d_manage.updataRoomListByRoomId(roomId);
+        d_manage.joinRoom(roomId,uId);
+
+        console.log(d_manage.getRoomInfoById(roomId));
 
         var renderData = {};
         renderData.roomId = roomId;
         renderData.STATIC_DOMAIN = global.appConfig.app_static_domain;
 
-        this.body = yield render('roomtest', renderData);
-    },
-
-    getRoomInfoById:function(roomId){
-        var roomList = d_manage.getRoomList();
-        var roomItem = null;
-        for(var i=0; i<roomList.length; i++){
-            roomItem = roomList[i];
-            if(roomItem.roomId == roomId){
-                return roomItem
-            }
-
-        }//end for
+        this.body = yield render('room_game', renderData);
     }
+
 
 
 };

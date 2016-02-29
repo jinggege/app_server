@@ -26,8 +26,8 @@
                             <span>{{roomInfo.pCount}}</span>
                             <span>roomid:{{roomInfo.roomId}}</span>
                         </div>
-						<div class='room-add' roomId={{roomInfo.roomId}}>
-                            <a href="addroom?room={{roomInfo.roomId}}">加入</a>
+						<div class='room-add'>
+                            <a href="addroom?room={{roomInfo.roomId}}&uId={{Math.floor(Math.random()*1000+1)}}">加入</a>
                         </div>
 					</div>
 				</li>
