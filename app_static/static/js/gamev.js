@@ -44,9 +44,7 @@ define(function(require,exports,module){
           $(".piece").on("click",function(event){
               var row = Number($(event.target).attr("row"));
               var col = Number($(event.target).attr("col"));
-              mapList[row][col] = 1;
-              $(event.target).addClass("piece-me");
-              _this.callback.call(null,{type:EVENT_CLICK_GRID,data:{row:row,col:col}});
+              _this.callback.call(null,{type:EVENT_CLICK_GRID,data:{target:event.target,row:row,col:col}});
           })
       },
 

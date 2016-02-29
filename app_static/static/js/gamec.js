@@ -6,6 +6,10 @@ define(function(require,exports,module){
     var gv=require("./gamev.js");
 
     var roomConfig = window.config.roomConfig;
+    var userConfig = window.config.userConfig;
+
+    var mapList = null;
+    var uList = null;
 
     var GC=function(){
         this.view = null;
@@ -16,17 +20,16 @@ define(function(require,exports,module){
         init:function(){
             this.view = new gv();
             this.view.init(this.clickGridEvent);
+            mapList = this.view.getGrid();
             this.startTick();
         },
         clickGridEvent:function(data){
-            console.log(_this.view.getGrid());
-
-            $.getJSON('http://127.0.0.1:3001/room?callback=?',
-                function(respone){
-                    console.log("1");
-                    console.log(respone.msg);
-                }
-            );
+            var type = data.type;
+            var row = data.data.row;
+            var col = data.data.col;
+            var target = data.data.target;
+            mapList[row][col] = 1;
+            $(target).addClass("piece-me");
 
         },
 
@@ -47,6 +50,7 @@ define(function(require,exports,module){
         },
 
         setUserInfo:function(userList){
+            uList = userList;
             var html = '<ul>';
             var uInfo = null;
             for(var i=0; i<userList.length; i++){
@@ -59,10 +63,6 @@ define(function(require,exports,module){
 
             $("#game-info").html(html);
         }
-
-
-
-
 
 
 

@@ -40,6 +40,7 @@ C_ADDROOM.prototype = {
 
         var renderData = {};
         renderData.roomId = roomId;
+        renderData.uId = uId;
         renderData.STATIC_DOMAIN = global.appConfig.app_static_domain;
 
         this.body = yield render('room_game', renderData);
