@@ -30,6 +30,7 @@ C_ROOM.prototype = {
         }
 
         if(u2Id != -1){
+            userInfo = d_manage.getUserInfo(u2Id);
             userList.push({uId:u2Id,color:userInfo.color,order:userInfo.order});
         }
 

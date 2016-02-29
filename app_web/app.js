@@ -12,7 +12,7 @@ var c_manage = require(global.rootUrl+'/controls/c_manage.js');
 var d_manage = require(global.rootUrl+'/data/d_manage.js');
 
 var app      = koa();
-app.use(logger());
+//app.use(logger());
 
 start();
 

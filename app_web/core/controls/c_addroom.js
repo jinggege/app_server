@@ -45,8 +45,6 @@ C_ADDROOM.prototype = {
         this.body = yield render('room_game', renderData);
     }
 
-
-
 };
 
 instance = instance==null? new C_ADDROOM() : instance;

@@ -36,14 +36,14 @@ define(function(require,exports,module){
         startTick:function(){
             var ticker = setInterval(function(){
                 $.get(
-                    "http://10.155.11.94:3001/getRoomStatus?roomId="+roomConfig.roomId+"&action=getUserInfo",
+                    "http://10.155.11.94:3001/getRoomStatus?roomId="+roomConfig.roomId+"&action=getRoomInfo",
                     function(data,status){
                         var resObj = $.parseJSON(data);
                         _this.setUserInfo(resObj.respone.data);
                     }
                 )
 
-            },2000);
+            },5000);
         },
 
         setUserInfo:function(userList){
@@ -52,7 +52,7 @@ define(function(require,exports,module){
             for(var i=0; i<userList.length; i++){
                 uInfo = userList[i];
                 html += '<li class="user-info">';
-                html += '<div class="u-"'+uInfo.order+'>'+'uid:'+uInfo.uId+'</div>';
+                html += '<div class="'+'u-'+uInfo.order+'">'+'uid:'+uInfo.uId+'</div>';
                 html += '</li>';
             }
             html +='</ul>';
