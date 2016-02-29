@@ -17,33 +17,44 @@ C_ROOM.prototype = {
         var cUrl = this.request.url;
         var args = url.parse(cUrl,true).query;
         var roomId = args.roomId;
+        var action = args.action;
 
         var roomInfo = d_manage.getRoomInfoById(roomId);
         var u1Id = roomInfo.u1Id;
         var u2Id = roomInfo.u2Id;
 
-        var userList = [];
-        var userInfo =null;
-        if(u1Id != -1){
-            userInfo = d_manage.getUserInfo(u1Id);
-            userList.push({uId:u1Id,color:userInfo.color,order:userInfo.order});
-        }
 
-        if(u2Id != -1){
-            userInfo = d_manage.getUserInfo(u2Id);
-            userList.push({uId:u2Id,color:userInfo.color,order:userInfo.order});
-        }
+        switch(action){
+            case "getUserInfo":
+                var userList = [];
+                var userInfo =null;
+                if(u1Id != -1){
+                    userInfo = d_manage.getUserInfo(u1Id);
+                    userList.push({uId:u1Id,color:userInfo.color,order:userInfo.order});
+                }
 
-        var resBody = {};
-        var respone = {};
-        resBody.respone = respone;
-        respone.data = userList;
-        respone.msg  = "成功";
-        respone.code = 1;
-        var str = JSON.stringify(resBody);
-        this.body = str;
+                if(u2Id != -1){
+                    userInfo = d_manage.getUserInfo(u2Id);
+                    userList.push({uId:u2Id,color:userInfo.color,order:userInfo.order});
+                }
 
-    }
+                var resBody = {};
+                var respone = {};
+                resBody.respone = respone;
+                respone.data = userList;
+                respone.msg  = "成功";
+                respone.code = 1;
+                var str = JSON.stringify(resBody);
+                this.body = str;
+                break;
+
+            case "getSep":
+
+                break;
+
+        }//END SWITCH
+
+    }//END FUNC
 
 
 

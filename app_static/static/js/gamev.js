@@ -30,7 +30,8 @@ define(function(require,exports,module){
               html += "<tr>";
               for(var j=0; j<MAP_COL; j++){
                   html += "<td class='grid'>";
-                  html += "<div class='piece'"+" row="+i+" col="+j+"  ></div>";
+                  var idStr = String(i)+"-"+String(j);
+                  html += "<div class='piece'"+" row="+i+" col="+j+" id="+idStr+"  ></div>";
                   html += "</td>";
                   arr.push(0);
               }
@@ -44,7 +45,7 @@ define(function(require,exports,module){
           $(".piece").on("click",function(event){
               var row = Number($(event.target).attr("row"));
               var col = Number($(event.target).attr("col"));
-              _this.callback.call(null,{type:EVENT_CLICK_GRID,data:{target:event.target,row:row,col:col}});
+              _this.callback.call(null,{type:EVENT_CLICK_GRID,data:{row:row,col:col}});
           })
       },
 

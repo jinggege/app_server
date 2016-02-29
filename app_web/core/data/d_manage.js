@@ -21,6 +21,7 @@ D_MANAGE.prototype = {
             roomObj.currCount = 0;
             roomObj.u1Id = -1;
             roomObj.u2Id = -1;
+            roomObj.activeId = -1;
             roomObj.pCount = String(roomObj.currCount)+"/"+String(roomObj.maxCount);
             list.push(roomObj);
         }
@@ -52,8 +53,15 @@ D_MANAGE.prototype = {
                     this.setUserInfo(uId,2,'#000000');
                 }
 
-                baseRoomList[i].currCount +=1;
-                baseRoomList[i].pCount =String(baseRoomList[i].currCount)+"/"+String(baseRoomList[i].maxCount);
+                roomItem.currCount +=1;
+                roomItem.pCount =String(roomItem.currCount)+"/"+String(roomItem.maxCount);
+
+                if(roomItem.currCount>= roomItem.maxCount){
+                    roomItem.status = "doing";
+                }else{
+                    roomItem.status = "waiting";
+                }
+
                 return;
             }
         }
@@ -84,7 +92,7 @@ D_MANAGE.prototype = {
 
     },
     setUserInfo:function(uId,order,color){
-        global.userList[uId] = {uId:uId,order:order,color:color};
+        global.userList[uId] = {uId:uId,order:order,color:color,step:0};
     },
 
     getUserInfo:function(uId){

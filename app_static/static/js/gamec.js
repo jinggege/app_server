@@ -24,12 +24,12 @@ define(function(require,exports,module){
             this.startTick();
         },
         clickGridEvent:function(data){
-            var type = data.type;
-            var row = data.data.row;
-            var col = data.data.col;
-            var target = data.data.target;
+            var type   = data.type;
+            var row    = data.data.row;
+            var col    = data.data.col;
             mapList[row][col] = 1;
-            $(target).addClass("piece-me");
+            var idStr = "#"+row+"-"+col;
+            $(idStr).addClass("piece-me");
 
         },
 
@@ -39,14 +39,14 @@ define(function(require,exports,module){
         startTick:function(){
             var ticker = setInterval(function(){
                 $.get(
-                    "http://10.155.11.94:3001/getRoomStatus?roomId="+roomConfig.roomId+"&action=getRoomInfo",
+                    "http://10.155.11.94:3001/getRoomStatus?roomId="+roomConfig.roomId+"&action=getUserInfo",
                     function(data,status){
                         var resObj = $.parseJSON(data);
                         _this.setUserInfo(resObj.respone.data);
                     }
                 )
 
-            },5000);
+            },1000);
         },
 
         setUserInfo:function(userList){
