@@ -21,7 +21,6 @@ D_MANAGE.prototype = {
             roomObj.currCount = 0;
             roomObj.u1Id = -1;
             roomObj.u2Id = -1;
-            roomObj.activeId = -1;
             roomObj.pCount = String(roomObj.currCount)+"/"+String(roomObj.maxCount);
             list.push(roomObj);
         }
@@ -30,7 +29,7 @@ D_MANAGE.prototype = {
 
     initUserInfo:function(){
         var userList = {};
-      // userList[0] = {uId:0,uName:"",color:#000000,order:1,roomId:xxx};
+      // userList[0] = {uId:0,uName:"",color:#000000,order:1,roomId:xxx,step:0};
         global.userList = userList;
 
     },
@@ -98,6 +97,19 @@ D_MANAGE.prototype = {
     getUserInfo:function(uId){
         var userList = global.userList;
         return userList[uId];
+    },
+    setUserStep:function(uId,step){
+        global.userList[uId].step = step;
+    },
+    getUserByOrder:function(order){
+        var baseRoomList = global.roomList;
+        var roomItem = null;
+        for(var i=0; i<baseRoomList.length; i++){
+            roomItem = baseRoomList[i];
+            if(roomItem.order == order){
+                return roomItem;
+            }
+        }//END FOR
     }
 
 };

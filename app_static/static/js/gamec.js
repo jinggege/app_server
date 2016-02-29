@@ -11,6 +11,7 @@ define(function(require,exports,module){
     var mapList = null;
     var uList = null;
 
+
     var GC=function(){
         this.view = null;
         _this = this;
@@ -38,18 +39,28 @@ define(function(require,exports,module){
         },
         startTick:function(){
             var ticker = setInterval(function(){
-                $.get(
-                    "http://10.155.11.94:3001/getRoomStatus?roomId="+roomConfig.roomId+"&action=getUserInfo",
-                    function(data,status){
-                        var resObj = $.parseJSON(data);
-                        _this.setUserInfo(resObj.respone.data);
-                    }
-                )
+
+                var baseUrl = "http://10.155.11.94:3001/getRoomStatus?roomId="+roomConfig.roomId+"&uId="+userConfig.uId;
+
+                //if(_this.roomIsFull()){
+               if(!_this.roomIsFull()){
+                    $.get(
+                            baseUrl+"&action=getUserInfo",
+                        _this.getUserInfo
+                    )
+                }else{
+                    $.get(
+                            baseUrl+"&action=getStepInfo",
+                        _this.getStepInfo
+                    )
+                }
+
+
 
             },1000);
         },
 
-        setUserInfo:function(userList){
+        showUser:function(userList){
             uList = userList;
             var html = '<ul>';
             var uInfo = null;
@@ -62,6 +73,36 @@ define(function(require,exports,module){
             html +='</ul>';
 
             $("#game-info").html(html);
+        },
+
+        roomIsFull:function(){
+            if(uList == null) return false;
+            return uList.length>=2;
+        },
+
+        getUserInfo:function(data,status){
+            var resObj = $.parseJSON(data);
+            _this.showUser(resObj.response.uList);
+        },
+        getStepInfo:function(data,status){
+            var resObj = $.parseJSON(data);
+            var stepInfo = resObj.response.stepInfo;
+
+            if(stepInfo.activeId == _this.getMe().uId){
+                $("#g-mask").css("display","block");
+            }else{
+                $("#g-mask").css("display","none");
+            }
+
+
+            console.log(resObj);
+        },
+        getMe:function(){
+            for(var i=0; i<uList.length; i++){
+                if(userConfig.uId == uList[i].uId){
+                    return uList[i];
+                }
+            }
         }
 
 
