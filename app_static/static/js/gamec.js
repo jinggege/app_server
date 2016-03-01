@@ -34,7 +34,7 @@ define(function(require,exports,module){
             var idStr = "#"+row+"-"+col;
             $(idStr).addClass("piece-me");
 
-            var baseUrl = "http://10.155.11.94:3001/getRoomStatus?roomId="+roomConfig.roomId+"&uId="+userConfig.uId;
+            var baseUrl =roomConfig.server_path+ "/getRoomStatus?roomId="+roomConfig.roomId+"&uId="+userConfig.uId;
             baseUrl+= "&action=sendStepInfo"+"&activeId="+_this.getOther().uId+"&step="+step+"&doUid="+userConfig.uId;
             baseUrl+= "&row="+row+"&col="+col;
             $.get(baseUrl,_this.sendStepResponse)
@@ -47,7 +47,7 @@ define(function(require,exports,module){
         startTick:function(){
             var ticker = setInterval(function(){
 
-                var baseUrl = "http://10.155.11.94:3001/getRoomStatus?roomId="+roomConfig.roomId+"&uId="+userConfig.uId;
+                var baseUrl =roomConfig.server_path+ "/getRoomStatus?roomId="+roomConfig.roomId+"&uId="+userConfig.uId;
                if(!_this.roomIsFull()){
                     $.get(
                             baseUrl+"&action=getUserInfo",
