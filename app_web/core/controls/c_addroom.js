@@ -26,7 +26,7 @@ C_ADDROOM.prototype = {
          * 同一ip& 同一uid  加入同一room   no
          *
          */
-        var userInfo = d_manage.getUserInfo(uId);
+        var userInfo = d_manage.getUserById(uId);
         if(userInfo == undefined){
             d_manage.joinRoom(roomId,uId);
         }else{

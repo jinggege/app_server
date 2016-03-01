@@ -34,12 +34,12 @@ C_ROOM.prototype = {
                 var userList = [];
                 var userInfo =null;
                 if(u1Id != -1){
-                    userInfo = d_manage.getUserInfo(u1Id);
+                    userInfo = d_manage.getUserById(u1Id);
                     userList.push({uId:u1Id,color:userInfo.color,order:userInfo.order});
                 }
 
                 if(u2Id != -1){
-                    userInfo = d_manage.getUserInfo(u2Id);
+                    userInfo = d_manage.getUserById(u2Id);
                     userList.push({uId:u2Id,color:userInfo.color,order:userInfo.order});
                 }
 
@@ -53,10 +53,9 @@ C_ROOM.prototype = {
             case "getStepInfo":
                 var step = args.hasOwnProperty("step")? args.step : 0;
                 var activeId = args.hasOwnProperty("activeId")? args.activeId : -1;
-
                 if(d_manage.roomIsFull(roomId) && stepInfo.step==0){
-                    console.log(d_manage.getUserByOrder(1));
-                    //activeId = d_manage.getUserByOrder(1).uId;
+                    activeId = d_manage.getUserByOrder(1).uId;
+                    stepInfo.activeId = activeId;
                 }
 
                 stepInfo.uId = uId;

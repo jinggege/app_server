@@ -28,8 +28,8 @@ D_MANAGE.prototype = {
     },
 
     initUserInfo:function(){
-        var userList = {};
-      // userList[0] = {uId:0,uName:"",color:#000000,order:1,roomId:xxx,step:0};
+        var userList = [];
+      // userList.push( {uId:0,uName:"",color:#000000,order:1,roomId:xxx,step:0});
         global.userList = userList;
 
     },
@@ -91,13 +91,9 @@ D_MANAGE.prototype = {
 
     },
     setUserInfo:function(uId,order,color){
-        global.userList[uId] = {uId:uId,order:order,color:color,step:0};
+        global.userList.push({uId:uId,order:order,color:color,step:0});
     },
 
-    getUserInfo:function(uId){
-        var userList = global.userList;
-        return userList[uId];
-    },
     setUserStep:function(uId,step){
         global.userList[uId].step = step;
     },
@@ -110,6 +106,18 @@ D_MANAGE.prototype = {
                 return uItem;
             }
         }//END FOR
+        return null;
+    },
+    getUserById:function(uId){
+        var userList = global.userList;
+        var uItem = null;
+        for(var i=0; i<userList.length; i++){
+            uItem = userList[i];
+            if(uItem.uId == uId){
+                return uItem;
+            }
+        }//END FOR
+        return null;
     }
 
 };
