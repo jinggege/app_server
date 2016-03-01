@@ -17,6 +17,9 @@ define(function(require,exports,module){
     var MAX_COL_INDEX = 0;
     var MAX_WIN_COUNT = 5;
 
+    var gameOver = false;
+    var ticker = null;
+
     var GC=function(){
         this.view = null;
         _this = this;
@@ -32,6 +35,13 @@ define(function(require,exports,module){
             this.startTick();
         },
         clickGridEvent:function(data){
+
+            if(_this.gameOver){
+
+                alert("game over");
+                return;
+            }
+
             myStep++;
             var type   = data.type;
             var row    = data.data.row;
@@ -43,22 +53,29 @@ define(function(require,exports,module){
             var idStr = "#"+row+"-"+col;
             $(idStr).addClass("piece-"+_this.getMe().order);
 
-           if(_this.checkWin(row,col,myInfo.order)){
-                console.log("===============win============",myInfo.uId);
-            }
-
             var baseUrl =roomConfig.server_path+ "/getRoomStatus?roomId="+roomConfig.roomId+"&uId="+userConfig.uId;
             baseUrl+= "&action=sendStepInfo"+"&activeId="+_this.getOther().uId+"&step="+myStep+"&doUid="+userConfig.uId;
             baseUrl+= "&row="+row+"&col="+col+"&order="+myInfo.order;
             $.get(baseUrl,_this.sendStepResponse)
 
+            if(_this.checkWin(row,col,myInfo.order)){
+                gameOver = true;
+                clearInterval(ticker);
+                console.log("===============win============",myInfo.uId);
+            }
         },
 
         resetGrid:function(){
             _this.view.resetGrid();
         },
         startTick:function(){
-            var ticker = setInterval(function(){
+            ticker = setInterval(function(){
+
+                if(_this.gameOver){
+                    clearInterval(ticker);
+                    alert("==GAME OVER==");
+                    return;
+                }
 
                 var baseUrl =roomConfig.server_path+ "/getRoomStatus?roomId="+roomConfig.roomId+"&uId="+userConfig.uId;
                if(!_this.roomIsFull()){
@@ -117,6 +134,7 @@ define(function(require,exports,module){
                 mapList[row][col] = stepInfo.order;
                 if(_this.checkWin(row,col,stepInfo.order)){
                     console.log("==============win=======",stepInfo.doUid);
+                    _this.gameOver = true;
                 }
             }
 

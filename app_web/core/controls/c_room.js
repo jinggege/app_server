@@ -83,6 +83,10 @@ C_ROOM.prototype = {
 
 
 
+
+
+
+
 };
 
 instance = instance==null? new C_ROOM() : instance;
