@@ -10,7 +10,7 @@ var d_manage = require(global.rootUrl+'/data/d_manage.js');
 
 
 var C_ROOM = function(){};
-var stepInfo = {uId:-1,step:0,order:0,activeId:-1};
+var stepInfo = {uId:-1,step:0,order:0,activeId:-1,doUid:-1,row:0,col:0};
 
 var instance = null;
 C_ROOM.prototype = {
@@ -24,6 +24,9 @@ C_ROOM.prototype = {
         var u1Id = roomInfo.u1Id;
         var u2Id = roomInfo.u2Id;
 
+
+        var step = 0;
+        var activeId = -1;
 
         var resBody = {};
         var response = {};
@@ -51,19 +54,30 @@ C_ROOM.prototype = {
                 break;
 
             case "getStepInfo":
-                var step = args.hasOwnProperty("step")? args.step : 0;
-                var activeId = args.hasOwnProperty("activeId")? args.activeId : -1;
-                if(d_manage.roomIsFull(roomId) && stepInfo.step==0){
+                step = args.hasOwnProperty("step")? args.step : stepInfo.step;
+                activeId = args.hasOwnProperty("activeId")? args.activeId : stepInfo.activeId;
+                if(d_manage.roomIsFull(roomId) && stepInfo.doUid==-1){
                     activeId = d_manage.getUserByOrder(1).uId;
                     stepInfo.activeId = activeId;
                 }
 
-                stepInfo.uId = uId;
+                stepInfo.uId  = uId;
                 stepInfo.step = step;
+                stepInfo.doUid = args.hasOwnProperty("doUid")?args.doUid:stepInfo.doUid;
                 response.stepInfo = stepInfo;
                 var stepStr = JSON.stringify(resBody);
-                this.body = stepStr;
+                this.body  = stepStr;
 
+                break;
+
+            case "sendStepInfo":
+                console.log("args==",args);
+                stepInfo.uId       = args.uId;
+                stepInfo.activeId = args.activeId;
+                stepInfo.step      = args.step;
+                stepInfo.row       = args.row;
+                stepInfo.col       = args.col;
+                stepInfo.doUid    = args.doUid;
                 break;
 
         }//END SWITCH

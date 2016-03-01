@@ -16,6 +16,7 @@ C_ADDROOM.prototype = {
         var uId    = arg.uId;
 
         if(d_manage.roomIsFull(roomId)){
+            return;
             this.body = yield render('roomfull', {});
             return;
         }

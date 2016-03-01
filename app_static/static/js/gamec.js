@@ -35,8 +35,9 @@ define(function(require,exports,module){
             $(idStr).addClass("piece-me");
 
             var baseUrl = "http://10.155.11.94:3001/getRoomStatus?roomId="+roomConfig.roomId+"&uId="+userConfig.uId;
-            baseUrl+= baseUrl+"&action=getStepInfo"+"&active="+_this.getOther().uId+"&step="+step;
-            $.get(baseUrl,_this.sendStep)
+            baseUrl+= "&action=sendStepInfo"+"&activeId="+_this.getOther().uId+"&step="+step+"&doUid="+userConfig.uId;
+            baseUrl+= "&row="+row+"&col="+col;
+            $.get(baseUrl,_this.sendStepResponse)
 
         },
 
@@ -47,8 +48,6 @@ define(function(require,exports,module){
             var ticker = setInterval(function(){
 
                 var baseUrl = "http://10.155.11.94:3001/getRoomStatus?roomId="+roomConfig.roomId+"&uId="+userConfig.uId;
-
-                //if(_this.roomIsFull()){
                if(!_this.roomIsFull()){
                     $.get(
                             baseUrl+"&action=getUserInfo",
@@ -99,6 +98,18 @@ define(function(require,exports,module){
             }else{
                 $("#g-mask").css("display","block");
             }
+
+            console.log(stepInfo,_this.getMe().uId);
+
+            if(stepInfo.doUid != _this.getMe().uId && stepInfo.doUid !=-1){
+                var row = stepInfo.row;
+                var col = stepInfo.col;
+
+                var idStr = "#"+row+"-"+col;
+                $(idStr).addClass("piece-me");
+            }
+
+
         },
         getMe:function(){
             for(var i=0; i<uList.length; i++){
@@ -115,7 +126,7 @@ define(function(require,exports,module){
                 }
             }
         },
-        sendStep:function(data,status){
+        sendStepResponse:function(data,status){
 
         }
 
