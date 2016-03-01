@@ -12,6 +12,9 @@ define(function(require,exports,module){
     var uList = null;
     var step = 0;
 
+    var MAX_ROW_INDEX = 0;
+    var MAX_COL_INDEX = 0;
+
 
     var GC=function(){
         this.view = null;
@@ -23,6 +26,8 @@ define(function(require,exports,module){
             this.view = new gv();
             this.view.init(this.clickGridEvent);
             mapList = this.view.getGrid();
+            MAX_ROW_INDEX = mapList.length - 1;
+            MAX_COL_INDEX = mapList[0].length - 1;
             this.startTick();
         },
         clickGridEvent:function(data){
@@ -30,13 +35,17 @@ define(function(require,exports,module){
             var type   = data.type;
             var row    = data.data.row;
             var col    = data.data.col;
-            mapList[row][col] = 1;
+
+            var myInfo =  _this.getMe();
+
+            mapList[row][col] = myInfo.order;
             var idStr = "#"+row+"-"+col;
             $(idStr).addClass("piece-"+_this.getMe().order);
+            _this.checkWin(row,col,myInfo.order);
 
             var baseUrl =roomConfig.server_path+ "/getRoomStatus?roomId="+roomConfig.roomId+"&uId="+userConfig.uId;
             baseUrl+= "&action=sendStepInfo"+"&activeId="+_this.getOther().uId+"&step="+step+"&doUid="+userConfig.uId;
-            baseUrl+= "&row="+row+"&col="+col+"&order="+_this.getMe().order;
+            baseUrl+= "&row="+row+"&col="+col+"&order="+myInfo.order;
             $.get(baseUrl,_this.sendStepResponse)
 
         },
@@ -99,9 +108,10 @@ define(function(require,exports,module){
             if(stepInfo.doUid != _this.getMe().uId && stepInfo.doUid !=-1 && stepInfo.order != 0){
                 var row = stepInfo.row;
                 var col = stepInfo.col;
-
                 var idStr = "#"+row+"-"+col;
                 $(idStr).addClass("piece-"+stepInfo.order);
+                mapList[row][col] = stepInfo.order;
+                _this.checkWin(row,col,stepInfo.order);
             }
 
 
@@ -123,6 +133,17 @@ define(function(require,exports,module){
         },
         sendStepResponse:function(data,status){
 
+        },
+        checkWin:function(row,col,order){
+            console.log("==check win");
+           // mapList
+
+            var maxStep = 5;
+            var count = 1;
+
+            for(var i=0; i<maxStep; i++){
+                //todo 思维不清晰  暂停
+            }
         }
 
 

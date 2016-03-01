@@ -1,7 +1,7 @@
 /**
  * Created by dell on 2016/2/26.
  */
-var url = require("url");
+var url      = require("url");
 var render   = require(global.rootUrl+'/lib/render.js');
 var d_manage = require(global.rootUrl+'/data/d_manage.js');
 

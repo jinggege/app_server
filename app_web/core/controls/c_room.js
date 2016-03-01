@@ -6,8 +6,8 @@
  * game server
  */
 var url         = require("url");
-var render      = require(global.rootUrl+'/lib/render.js');
-var d_manage = require(global.rootUrl+'/data/d_manage.js');
+var render     = require(global.rootUrl+'/lib/render.js');
+var d_manage   = require(global.rootUrl+'/data/d_manage.js');
 
 
 var C_ROOM = function(){};
@@ -16,18 +16,14 @@ var stepInfo = {uId:-1,step:0,order:0,activeId:-1,doUid:-1,row:0,col:0};
 var instance = null;
 C_ROOM.prototype = {
     getControl:function*(){
-        var cUrl = this.request.url;
-        var args = url.parse(cUrl,true).query;
-        var roomId = args.roomId;
-        var uId    = args.uId;
-        var action = args.action;
+        var cUrl     = this.request.url;
+        var args     = url.parse(cUrl,true).query;
+        var roomId   = args.roomId;
+        var uId      = args.uId;
+        var action   = args.action;
         var roomInfo = d_manage.getRoomInfoById(roomId);
-        var u1Id = roomInfo.u1Id;
-        var u2Id = roomInfo.u2Id;
-
-
-        var step = 0;
-        var activeId = -1;
+        var u1Id     = roomInfo.u1Id;
+        var u2Id     = roomInfo.u2Id;
 
         var resBody = {};
         var response = {};
@@ -55,24 +51,20 @@ C_ROOM.prototype = {
                 break;
 
             case "getStepInfo":
-                step = args.hasOwnProperty("step")? args.step : stepInfo.step;
-                activeId = args.hasOwnProperty("activeId")? args.activeId : stepInfo.activeId;
+                stepInfo.step = args.hasOwnProperty("step")? args.step : stepInfo.step;
+                stepInfo.activeId = args.hasOwnProperty("activeId")? args.activeId : stepInfo.activeId;
                 if(d_manage.roomIsFull(roomId) && stepInfo.doUid==-1){
-                    activeId = d_manage.getUserByOrder(1).uId;
-                    stepInfo.activeId = activeId;
+                    stepInfo.activeId = d_manage.getUserByOrder(1).uId;
                 }
 
-                stepInfo.uId  = uId;
-                stepInfo.step = step;
+                stepInfo.uId   = uId;
                 stepInfo.doUid = args.hasOwnProperty("doUid")?args.doUid:stepInfo.doUid;
                 stepInfo.order = args.hasOwnProperty("order")?args.order:stepInfo.order;
                 response.stepInfo = stepInfo;
-                var stepStr = JSON.stringify(resBody);
-                this.body  = stepStr;
+                this.body  = JSON.stringify(resBody);
                 break;
 
             case "sendStepInfo":
-                console.log("args==",args);
                 stepInfo.uId       = args.uId;
                 stepInfo.activeId = args.activeId;
                 stepInfo.step      = args.step;
