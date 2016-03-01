@@ -32,11 +32,11 @@ define(function(require,exports,module){
             var col    = data.data.col;
             mapList[row][col] = 1;
             var idStr = "#"+row+"-"+col;
-            $(idStr).addClass("piece-me");
+            $(idStr).addClass("piece-"+_this.getMe().order);
 
             var baseUrl =roomConfig.server_path+ "/getRoomStatus?roomId="+roomConfig.roomId+"&uId="+userConfig.uId;
             baseUrl+= "&action=sendStepInfo"+"&activeId="+_this.getOther().uId+"&step="+step+"&doUid="+userConfig.uId;
-            baseUrl+= "&row="+row+"&col="+col;
+            baseUrl+= "&row="+row+"&col="+col+"&order="+_this.getMe().order;
             $.get(baseUrl,_this.sendStepResponse)
 
         },
@@ -59,8 +59,6 @@ define(function(require,exports,module){
                         _this.getStepInfo
                     )
                 }
-
-
 
             },1000);
         },
@@ -92,21 +90,18 @@ define(function(require,exports,module){
         getStepInfo:function(data,status){
             var resObj = $.parseJSON(data);
             var stepInfo = resObj.response.stepInfo;
-            console.log(stepInfo.activeId,_this.getMe().uId,stepInfo.activeId == _this.getMe().uId);
             if(stepInfo.activeId == _this.getMe().uId){
                 $("#g-mask").css("display","none");
             }else{
                 $("#g-mask").css("display","block");
             }
 
-            console.log(stepInfo,_this.getMe().uId);
-
-            if(stepInfo.doUid != _this.getMe().uId && stepInfo.doUid !=-1){
+            if(stepInfo.doUid != _this.getMe().uId && stepInfo.doUid !=-1 && stepInfo.order != 0){
                 var row = stepInfo.row;
                 var col = stepInfo.col;
 
                 var idStr = "#"+row+"-"+col;
-                $(idStr).addClass("piece-me");
+                $(idStr).addClass("piece-"+stepInfo.order);
             }
 
 

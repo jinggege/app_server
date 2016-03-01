@@ -3,6 +3,7 @@
  */
 /**
  * Created by dell on 2016/2/26.
+ * game server
  */
 var url         = require("url");
 var render      = require(global.rootUrl+'/lib/render.js');
@@ -64,10 +65,10 @@ C_ROOM.prototype = {
                 stepInfo.uId  = uId;
                 stepInfo.step = step;
                 stepInfo.doUid = args.hasOwnProperty("doUid")?args.doUid:stepInfo.doUid;
+                stepInfo.order = args.hasOwnProperty("order")?args.order:stepInfo.order;
                 response.stepInfo = stepInfo;
                 var stepStr = JSON.stringify(resBody);
                 this.body  = stepStr;
-
                 break;
 
             case "sendStepInfo":
@@ -78,7 +79,10 @@ C_ROOM.prototype = {
                 stepInfo.row       = args.row;
                 stepInfo.col       = args.col;
                 stepInfo.doUid    = args.doUid;
+                stepInfo.order    = args.order;
+                this.body = JSON.stringify(stepInfo);
                 break;
+
 
         }//END SWITCH
 
