@@ -50,6 +50,7 @@ C_ROOM.prototype = {
                 this.body = str;
                 break;
 
+
             case "getStepInfo":
                 stepInfo.step = args.hasOwnProperty("step")? args.step : stepInfo.step;
                 stepInfo.activeId = args.hasOwnProperty("activeId")? args.activeId : stepInfo.activeId;

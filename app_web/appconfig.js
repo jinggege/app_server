@@ -3,9 +3,9 @@
  */
 module.exports = {
     //=====config app_web===========
-    app_web_port:3001,
+    app_web_port:3002,
     app_web_domain:"http://10.155.11.94",
-    app_web_path:"http://10.155.11.94:3001",
+    app_web_path:"http://10.155.11.94:3002",
 
     //=====config app_static===========
     app_static_port:80,

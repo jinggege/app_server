@@ -10,11 +10,12 @@ define(function(require,exports,module){
 
     var mapList = null;
     var uList = null;
-    var step = 0;
+
+    var myStep = 0;
 
     var MAX_ROW_INDEX = 0;
     var MAX_COL_INDEX = 0;
-
+    var MAX_WIN_COUNT = 5;
 
     var GC=function(){
         this.view = null;
@@ -31,7 +32,7 @@ define(function(require,exports,module){
             this.startTick();
         },
         clickGridEvent:function(data){
-            step++;
+            myStep++;
             var type   = data.type;
             var row    = data.data.row;
             var col    = data.data.col;
@@ -41,10 +42,13 @@ define(function(require,exports,module){
             mapList[row][col] = myInfo.order;
             var idStr = "#"+row+"-"+col;
             $(idStr).addClass("piece-"+_this.getMe().order);
-            _this.checkWin(row,col,myInfo.order);
+
+           if(_this.checkWin(row,col,myInfo.order)){
+                console.log("===============win============",myInfo.uId);
+            }
 
             var baseUrl =roomConfig.server_path+ "/getRoomStatus?roomId="+roomConfig.roomId+"&uId="+userConfig.uId;
-            baseUrl+= "&action=sendStepInfo"+"&activeId="+_this.getOther().uId+"&step="+step+"&doUid="+userConfig.uId;
+            baseUrl+= "&action=sendStepInfo"+"&activeId="+_this.getOther().uId+"&step="+myStep+"&doUid="+userConfig.uId;
             baseUrl+= "&row="+row+"&col="+col+"&order="+myInfo.order;
             $.get(baseUrl,_this.sendStepResponse)
 
@@ -97,7 +101,7 @@ define(function(require,exports,module){
             _this.showUser(resObj.response.uList);
         },
         getStepInfo:function(data,status){
-            var resObj = $.parseJSON(data);
+            var resObj   = $.parseJSON(data);
             var stepInfo = resObj.response.stepInfo;
             if(stepInfo.activeId == _this.getMe().uId){
                 $("#g-mask").css("display","none");
@@ -111,9 +115,10 @@ define(function(require,exports,module){
                 var idStr = "#"+row+"-"+col;
                 $(idStr).addClass("piece-"+stepInfo.order);
                 mapList[row][col] = stepInfo.order;
-                _this.checkWin(row,col,stepInfo.order);
+                if(_this.checkWin(row,col,stepInfo.order)){
+                    console.log("==============win=======",stepInfo.doUid);
+                }
             }
-
 
         },
         getMe:function(){
@@ -136,14 +141,28 @@ define(function(require,exports,module){
         },
         checkWin:function(row,col,order){
             console.log("==check win");
-           // mapList
-
-            var maxStep = 5;
-            var count = 1;
-
-            for(var i=0; i<maxStep; i++){
-                //todo 思维不清晰  暂停
+            if(this.check1(row,col,order)>= MAX_WIN_COUNT){
+                return true;
             }
+            return false;
+        },
+
+        /**横向检测*/
+        check1:function(row,col,order){
+            var winStep = 0;
+            var rowList = mapList[row];
+            for(var i=0; i<= MAX_COL_INDEX; i++){
+                if(rowList[i] == order){
+                    winStep++;
+                    if(winStep >= MAX_WIN_COUNT){
+                        return winStep;
+                    }
+                }else{
+                    winStep--;
+                    winStep = winStep<=0? 0:winStep;
+                }
+            }
+            return winStep;
         }
 
 
