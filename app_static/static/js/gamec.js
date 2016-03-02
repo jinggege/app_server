@@ -158,17 +158,17 @@ define(function(require,exports,module){
         },
         checkWin:function(row,col,order){
             console.log("==check win");
-            if(
-                this.check1(row,col,order) ||
-                this.check2(row,col,order)
-                ){
+            var line1 = this.checkLine1(row,col,order);
+            var line2 = this.checkLine2(row,col,order);
+            console.log("line status=",line1,line2);
+            if( line1 && line2 ){
                 return true;
             }
             return false;
         },
 
         /**横向检测*/
-        check1:function(row,col,order){
+        checkLine1:function(row,col,order){
             var winStep = 0;
             var rowList = mapList[row];
             for(var i=0; i<= MAX_COL_INDEX; i++){
@@ -185,23 +185,59 @@ define(function(require,exports,module){
             return false;
         },
         /**垂直向检测*/
-        check2:function(row,col,order){
+        checkLine2:function(row,col,order){
             var winStep = 0;
             for(var i=0; i<=MAX_ROW_INDEX; i++){
-                if(mapList[row][col] == order){
+                if(mapList[row][i] == order){
                     winStep++;
                     if(winStep>= MAX_WIN_COUNT){
                         return true;
-                    }else{
-                        winStep--;
-                        winStep = winStep<0? 0:winStep;
                     }
+                }else{
+                    winStep--;
+                    winStep = winStep<0? 0:winStep;
                 }
             }
 
             return false;
         },
 
+        /*
+        * check 45度 线
+         */
+        checkLine3:function(row,col,order){
+            var winStep = 0;
+            var cRow = row;
+            var cCol = col;
+            while(cRow>0){
+                cRow--;
+                cCol++;
+
+                console.log("start=",cRow,cCol);
+                if(cCol>= MAX_COL_INDEX){
+                    break;
+                }
+
+            }
+
+
+            while(cRow<MAX_ROW_INDEX){
+                if(mapList[cRow][cCol] == order){
+                    winStep++;
+                    if(winStep>= MAX_WIN_COUNT){
+                        return true;
+                    }
+                }else{
+                    winStep--;
+                    winStep = winStep<0? 0:winStep;
+                }
+
+                cRow++;
+                cCol--;
+            }//END WHILD
+
+            return false;
+        },
 
         end:function(){
             clearInterval(ticker);
