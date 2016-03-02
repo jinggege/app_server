@@ -5,6 +5,7 @@
  * Created by dell on 2016/2/26.
  * game server
  */
+'use strict';
 var url         = require("url");
 var render     = require(global.rootUrl+'/lib/render.js');
 var d_manage   = require(global.rootUrl+'/data/d_manage.js');
@@ -51,11 +52,9 @@ C_ROOM.prototype = {
                 break;
 
             case "getStepInfo":
-
                 stepInfo.step = args.hasOwnProperty("step")? args.step : stepInfo.step;
                 stepInfo.activeId = args.hasOwnProperty("activeId")? args.activeId : stepInfo.activeId;
                 if(d_manage.roomIsFull(roomId) && stepInfo.doUid==-1){
-                    //todo error
                     stepInfo.activeId = d_manage.getRoomUserByOrder(roomId,1).uId;
                 }
 
@@ -77,10 +76,9 @@ C_ROOM.prototype = {
                 this.body = JSON.stringify(stepInfo);
                 break;
 
-
         }//END SWITCH
 
-    },//END FUNC
+    },//end getControl
 
     getStepInfoByRoomId:function(roomId){
         var roomInfo = stepInfoMap[roomId];
@@ -89,9 +87,6 @@ C_ROOM.prototype = {
         }
         return stepInfoMap[roomId];
     }
-
-
-
 
 
 };

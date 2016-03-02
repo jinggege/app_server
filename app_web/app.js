@@ -1,4 +1,4 @@
-﻿
+﻿'use strict';
 var rootUrl = __dirname;
 global.rootUrl = rootUrl+'/core';
 
@@ -21,6 +21,7 @@ function start(){
     d_manage.start();
     c_manage.start(app);
 }
+
 
 
 app.listen(config.app_web_port);

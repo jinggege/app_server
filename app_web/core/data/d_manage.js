@@ -2,8 +2,10 @@
  * Created by dell on 2016/2/26.
  * 全局数据管理类
  */
-var D_MANAGE = function(){};
 
+'use strict';
+
+var D_MANAGE = function(){};
 var instance = null;
 
 D_MANAGE.prototype = {
@@ -124,6 +126,20 @@ D_MANAGE.prototype = {
             }
         }//END FOR
         return null;
+    },
+    clearRoomById:function(roomId){
+        var roomInfo = null;
+        for(var i=0; i<global.roomList.length; i++){
+            roomInfo = global.roomList[i];
+            if(roomInfo.roomId = roomId){
+                roomInfo.u1Id = -1;
+                roomInfo.u2Id = -1;
+                roomInfo.currCount = 0;
+                roomInfo.pCount = "0/"+roomInfo.maxCount;
+                global.roomList[i] = roomInfo;
+                return;
+            }
+        }
     }
 
 };
