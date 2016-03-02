@@ -8,6 +8,10 @@ define(function(require,exports,module){
     var roomConfig = window.config.roomConfig;
     var userConfig = window.config.userConfig;
 
+    var N_WAIT = "等待";
+    var N_WIN  = "赢";
+    var N_LOST = "输";
+
     var mapList = null;
     var uList = null;
 
@@ -33,12 +37,12 @@ define(function(require,exports,module){
             MAX_ROW_INDEX = mapList.length - 1;
             MAX_COL_INDEX = mapList[0].length - 1;
             this.startTick();
+
+            $("#g-notice").html(N_WAIT);
         },
         clickGridEvent:function(data){
 
             if(_this.gameOver){
-
-                alert("game over");
                 return;
             }
 
@@ -58,8 +62,11 @@ define(function(require,exports,module){
             baseUrl+= "&row="+row+"&col="+col+"&order="+myInfo.order;
             $.get(baseUrl,_this.sendStepResponse);
 
+
+            _this.wait(true,N_WAIT);
+
             if(_this.checkWin(row,col,myInfo.order)){
-                console.log("===============win============",myInfo.uId);
+                _this.wait(true,N_WIN);
                 _this.end();
             }
         },
@@ -121,8 +128,9 @@ define(function(require,exports,module){
             var stepInfo = resObj.response.stepInfo;
             if(stepInfo.activeId == _this.getMe().uId){
                 $("#g-mask").css("display","none");
+                _this.wait(false,"");
             }else{
-                $("#g-mask").css("display","block");
+                _this.wait(true,N_WAIT);
             }
 
             if(stepInfo.doUid != _this.getMe().uId && stepInfo.doUid !=-1 && stepInfo.order != 0){
@@ -132,8 +140,13 @@ define(function(require,exports,module){
                 $(idStr).addClass("piece-"+stepInfo.order);
                 mapList[row][col] = stepInfo.order;
                 if(_this.checkWin(row,col,stepInfo.order)){
-                    console.log("==============win=======",stepInfo.doUid);
                    _this.end();
+                    if(stepInfo.doUid == _this.getMe().uId){
+                        _this.wait(true,N_WIN);
+                    }else{
+                        _this.wait(true,N_LOST)
+                    }
+
                 }
             }
 
@@ -157,7 +170,6 @@ define(function(require,exports,module){
 
         },
         checkWin:function(row,col,order){
-            console.log("==check win");
             var line1 = this.checkLine1(row,col,order);
             var line2 = this.checkLine2(row,col,order);
             var line3 = this.checkLine3(row,col,order);
@@ -220,7 +232,6 @@ define(function(require,exports,module){
             }
 
             while(cRow<=MAX_ROW_INDEX && cCol>= 0){
-                console.log("====",cRow,cCol);
                 if(mapList[cRow][cCol] == order){
                     winStep++;
                     if(winStep>= MAX_WIN_COUNT){
@@ -274,6 +285,17 @@ define(function(require,exports,module){
             clearInterval(ticker);
             myStep = 0;
             gameOver = true;
+        },
+        wait:function(isWait,msg){
+            if(isWait){
+                $("#g-notice").css("display","block");
+                $("#g-notice").html(msg);
+                $("#g-mask").css("display","block");
+            }else{
+                $("#g-notice").css("display","none");
+                $("#g-mask").css("display","none");
+            }
+
         }
 
 
