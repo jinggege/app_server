@@ -9,6 +9,7 @@ var d_manage = require(global.rootUrl+'/data/d_manage.js');
 var C_ADDROOM = function(){};
 
 var instance = null;
+
 C_ADDROOM.prototype = {
     getControl:function*(){
         var cUrl   = this.request.url;
@@ -25,7 +26,6 @@ C_ADDROOM.prototype = {
          *防止重复加入room
          * 同一uid 加入同一room            ok
          * 同一ip& 同一uid  加入同一room   no
-         *
          */
         var userInfo = d_manage.getRoomUserById(roomId,uId);
         if(userInfo == undefined ||  userInfo== null){
@@ -37,7 +37,6 @@ C_ADDROOM.prototype = {
                 }
             }
         }
-
 
         var renderData    = {};
         renderData.roomId = roomId;
