@@ -26,8 +26,8 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_web/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="176" max-vertical-offset="770">
-              <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="214" max-vertical-offset="770">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -36,8 +36,8 @@
       <file leaf-file-name="gamec.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app_static/static/js/gamec.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.60971224" vertical-offset="3863" max-vertical-offset="5698">
-              <caret line="191" column="30" selection-start-line="191" selection-start-column="30" selection-end-line="191" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.24820144" vertical-offset="5120" max-vertical-offset="5676">
+              <caret line="239" column="0" selection-start-line="239" selection-start-column="0" selection-end-line="239" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -75,8 +75,8 @@
         <option value="$PROJECT_DIR$/app_web/core/controls/c_addroom.js" />
         <option value="$PROJECT_DIR$/app_web/core/data/d_manage.js" />
         <option value="$PROJECT_DIR$/app_web/core/controls/c_room.js" />
-        <option value="$PROJECT_DIR$/app_web/app.js" />
         <option value="$PROJECT_DIR$/app_static/static/js/gamec.js" />
+        <option value="$PROJECT_DIR$/app_web/app.js" />
       </list>
     </option>
   </component>
@@ -613,16 +613,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app_web/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="176" max-vertical-offset="770">
-          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="214" max-vertical-offset="770">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app_static/static/js/gamec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60971224" vertical-offset="3863" max-vertical-offset="5698">
-          <caret line="191" column="30" selection-start-line="191" selection-start-column="30" selection-end-line="191" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.24820144" vertical-offset="5120" max-vertical-offset="5676">
+          <caret line="239" column="0" selection-start-line="239" selection-start-column="0" selection-end-line="239" selection-end-column="0" />
           <folding />
         </state>
       </provider>

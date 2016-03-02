@@ -160,8 +160,9 @@ define(function(require,exports,module){
             console.log("==check win");
             var line1 = this.checkLine1(row,col,order);
             var line2 = this.checkLine2(row,col,order);
-            console.log("line status=",line1,line2);
-            if( line1 && line2 ){
+            var line3 = this.checkLine3(row,col,order);
+            console.log("line status=",line1,line2,line3);
+            if( line1 || line2 || line3 ){
                 return true;
             }
             return false;
@@ -212,16 +213,12 @@ define(function(require,exports,module){
             while(cRow>0){
                 cRow--;
                 cCol++;
-
-                console.log("start=",cRow,cCol);
                 if(cCol>= MAX_COL_INDEX){
                     break;
                 }
-
             }
 
-
-            while(cRow<MAX_ROW_INDEX){
+            while(cRow<MAX_ROW_INDEX && cCol>= 0){
                 if(mapList[cRow][cCol] == order){
                     winStep++;
                     if(winStep>= MAX_WIN_COUNT){
@@ -231,6 +228,8 @@ define(function(require,exports,module){
                     winStep--;
                     winStep = winStep<0? 0:winStep;
                 }
+
+                console.log("line3=",cRow,cCol);
 
                 cRow++;
                 cCol--;
