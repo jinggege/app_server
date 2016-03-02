@@ -9,7 +9,6 @@ var url         = require("url");
 var render     = require(global.rootUrl+'/lib/render.js');
 var d_manage   = require(global.rootUrl+'/data/d_manage.js');
 
-
 var C_ROOM = function(){};
 var stepInfo = {uId:-1,step:0,order:0,activeId:-1,doUid:-1,row:0,col:0};
 
@@ -25,7 +24,7 @@ C_ROOM.prototype = {
         var u1Id     = roomInfo.u1Id;
         var u2Id     = roomInfo.u2Id;
 
-        var resBody = {};
+        var resBody  = {};
         var response = {};
         resBody.response = response;
 
@@ -44,10 +43,9 @@ C_ROOM.prototype = {
                 }
 
                 response.uList = userList;
-                response.msg  = "成功";
-                response.code = 1;
-                var str = JSON.stringify(resBody);
-                this.body = str;
+                response.msg   = "成功";
+                response.code  = 1;
+                this.body     = JSON.stringify(resBody);
                 break;
 
 
@@ -80,8 +78,6 @@ C_ROOM.prototype = {
         }//END SWITCH
 
     }//END FUNC
-
-
 
 
 

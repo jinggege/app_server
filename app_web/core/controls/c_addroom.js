@@ -38,7 +38,7 @@ C_ADDROOM.prototype = {
         }
 
 
-        var renderData = {};
+        var renderData    = {};
         renderData.roomId = roomId;
         renderData.uId    = uId;
         renderData.STATIC_DOMAIN = global.appConfig.app_static_domain;

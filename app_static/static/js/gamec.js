@@ -56,12 +56,11 @@ define(function(require,exports,module){
             var baseUrl =roomConfig.server_path+ "/getRoomStatus?roomId="+roomConfig.roomId+"&uId="+userConfig.uId;
             baseUrl+= "&action=sendStepInfo"+"&activeId="+_this.getOther().uId+"&step="+myStep+"&doUid="+userConfig.uId;
             baseUrl+= "&row="+row+"&col="+col+"&order="+myInfo.order;
-            $.get(baseUrl,_this.sendStepResponse)
+            $.get(baseUrl,_this.sendStepResponse);
 
             if(_this.checkWin(row,col,myInfo.order)){
-                gameOver = true;
-                clearInterval(ticker);
                 console.log("===============win============",myInfo.uId);
+                _this.end();
             }
         },
 
@@ -134,7 +133,7 @@ define(function(require,exports,module){
                 mapList[row][col] = stepInfo.order;
                 if(_this.checkWin(row,col,stepInfo.order)){
                     console.log("==============win=======",stepInfo.doUid);
-                    _this.gameOver = true;
+                   _this.end();
                 }
             }
 
@@ -159,7 +158,10 @@ define(function(require,exports,module){
         },
         checkWin:function(row,col,order){
             console.log("==check win");
-            if(this.check1(row,col,order)>= MAX_WIN_COUNT){
+            if(
+                this.check1(row,col,order) ||
+                this.check2(row,col,order)
+                ){
                 return true;
             }
             return false;
@@ -173,14 +175,38 @@ define(function(require,exports,module){
                 if(rowList[i] == order){
                     winStep++;
                     if(winStep >= MAX_WIN_COUNT){
-                        return winStep;
+                        return true;
                     }
                 }else{
                     winStep--;
                     winStep = winStep<=0? 0:winStep;
                 }
             }
-            return winStep;
+            return false;
+        },
+        /**垂直向检测*/
+        check2:function(row,col,order){
+            var winStep = 0;
+            for(var i=0; i<=MAX_ROW_INDEX; i++){
+                if(mapList[row][col] == order){
+                    winStep++;
+                    if(winStep>= MAX_WIN_COUNT){
+                        return true;
+                    }else{
+                        winStep--;
+                        winStep = winStep<0? 0:winStep;
+                    }
+                }
+            }
+
+            return false;
+        },
+
+
+        end:function(){
+            clearInterval(ticker);
+            myStep = 0;
+            gameOver = true;
         }
 
 
