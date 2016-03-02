@@ -10,7 +10,7 @@ var render     = require(global.rootUrl+'/lib/render.js');
 var d_manage   = require(global.rootUrl+'/data/d_manage.js');
 
 var C_ROOM = function(){};
-var stepInfo = {uId:-1,step:0,order:0,activeId:-1,doUid:-1,row:0,col:0};
+var stepInfoMap = {};
 
 var instance = null;
 C_ROOM.prototype = {
@@ -24,6 +24,8 @@ C_ROOM.prototype = {
         var u1Id     = roomInfo.u1Id;
         var u2Id     = roomInfo.u2Id;
 
+        var stepInfo = instance.getStepInfoByRoomId(roomId);
+
         var resBody  = {};
         var response = {};
         resBody.response = response;
@@ -33,12 +35,12 @@ C_ROOM.prototype = {
                 var userList = [];
                 var userInfo =null;
                 if(u1Id != -1){
-                    userInfo = d_manage.getUserById(u1Id);
+                    userInfo = d_manage.getRoomUserById(roomId,u1Id);
                     userList.push({uId:u1Id,color:userInfo.color,order:userInfo.order});
                 }
 
                 if(u2Id != -1){
-                    userInfo = d_manage.getUserById(u2Id);
+                    userInfo = d_manage.getRoomUserById(roomId,u2Id);
                     userList.push({uId:u2Id,color:userInfo.color,order:userInfo.order});
                 }
 
@@ -48,12 +50,13 @@ C_ROOM.prototype = {
                 this.body     = JSON.stringify(resBody);
                 break;
 
-
             case "getStepInfo":
+
                 stepInfo.step = args.hasOwnProperty("step")? args.step : stepInfo.step;
                 stepInfo.activeId = args.hasOwnProperty("activeId")? args.activeId : stepInfo.activeId;
                 if(d_manage.roomIsFull(roomId) && stepInfo.doUid==-1){
-                    stepInfo.activeId = d_manage.getUserByOrder(1).uId;
+                    //todo error
+                    stepInfo.activeId = d_manage.getRoomUserByOrder(roomId,1).uId;
                 }
 
                 stepInfo.uId   = uId;
@@ -77,7 +80,15 @@ C_ROOM.prototype = {
 
         }//END SWITCH
 
-    }//END FUNC
+    },//END FUNC
+
+    getStepInfoByRoomId:function(roomId){
+        var roomInfo = stepInfoMap[roomId];
+        if(roomInfo == null || roomInfo==undefined){
+            stepInfoMap[roomId] = {uId:-1,step:0,order:0,activeId:-1,doUid:-1,row:0,col:0};
+        }
+        return stepInfoMap[roomId];
+    }
 
 
 

@@ -28,9 +28,8 @@ D_MANAGE.prototype = {
     },
 
     initUserInfo:function(){
-        var userList = [];
-      // userList.push( {uId:0,uName:"",color:#000000,order:1,roomId:xxx,step:0});
-        global.userList = userList;
+        global.roomUserMap = {};
+       // global.roomUserMap[roomId]=[{uId:0,uName:"",color:#000000,order:1,roomId:xxx,step:0}]
 
     },
     getRoomList:function(){
@@ -46,10 +45,10 @@ D_MANAGE.prototype = {
 
                 if(roomItem.u1Id == -1){
                     roomItem.u1Id = uId;
-                    this.setUserInfo(uId,1,'#FFFFFF');
+                    this.setRoomUserInfo(roomId,uId,1,'#FFFFFF');
                 }else{
                     roomItem.u2Id = uId;
-                    this.setUserInfo(uId,2,'#000000');
+                    this.setRoomUserInfo(roomId,uId,2,'#000000');
                 }
 
                 roomItem.currCount +=1;
@@ -90,15 +89,17 @@ D_MANAGE.prototype = {
         }//END FOR
 
     },
-    setUserInfo:function(uId,order,color){
-        global.userList.push({uId:uId,order:order,color:color,step:0});
+    setRoomUserInfo:function(roomId,uId,order,color){
+        var uList = global.roomUserMap[roomId];
+        if(uList == null || uList==undefined){
+            global.roomUserMap[roomId] = [];
+        }
+        var uInfo = {uId:uId,order:order,color:color};
+        global.roomUserMap[roomId].push(uInfo);
     },
 
-    setUserStep:function(uId,step){
-        global.userList[uId].step = step;
-    },
-    getUserByOrder:function(order){
-        var userList = global.userList;
+    getRoomUserByOrder:function(roomId,order){
+        var userList = global.roomUserMap[roomId];
         var uItem = null;
         for(var i=0; i<userList.length; i++){
             uItem = userList[i];
@@ -108,8 +109,13 @@ D_MANAGE.prototype = {
         }//END FOR
         return null;
     },
-    getUserById:function(uId){
-        var userList = global.userList;
+    getRoomUserById:function(roomId,uId){
+        var userList = global.roomUserMap[roomId];
+
+        if(userList == undefined || userList==null){
+            return null;
+        }
+
         var uItem = null;
         for(var i=0; i<userList.length; i++){
             uItem = userList[i];
