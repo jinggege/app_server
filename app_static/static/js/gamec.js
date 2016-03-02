@@ -161,8 +161,9 @@ define(function(require,exports,module){
             var line1 = this.checkLine1(row,col,order);
             var line2 = this.checkLine2(row,col,order);
             var line3 = this.checkLine3(row,col,order);
-            console.log("line status=",line1,line2,line3);
-            if( line1 || line2 || line3 ){
+            var line4 = this.checkLine4(row,col,order);
+            console.log("line status=",line1,line2,line3,line4);
+            if( line1 || line2 || line3 || line4){
                 return true;
             }
             return false;
@@ -210,7 +211,7 @@ define(function(require,exports,module){
             var winStep = 0;
             var cRow = row;
             var cCol = col;
-            while(cRow>0){
+            while(cRow>0 && cCol>0){
                 cRow--;
                 cCol++;
                 if(cCol>= MAX_COL_INDEX){
@@ -218,7 +219,8 @@ define(function(require,exports,module){
                 }
             }
 
-            while(cRow<MAX_ROW_INDEX && cCol>= 0){
+            while(cRow<=MAX_ROW_INDEX && cCol>= 0){
+                console.log("====",cRow,cCol);
                 if(mapList[cRow][cCol] == order){
                     winStep++;
                     if(winStep>= MAX_WIN_COUNT){
@@ -229,11 +231,41 @@ define(function(require,exports,module){
                     winStep = winStep<0? 0:winStep;
                 }
 
-                console.log("line3=",cRow,cCol);
-
                 cRow++;
                 cCol--;
             }//END WHILD
+
+            return false;
+        },
+
+        /*
+         * check 225度 线
+         */
+        checkLine4:function(row,col,order){
+            var winStep = 0;
+            var cRow = row;
+            var cCol = col;
+
+            while(cRow>0 && cCol >0){
+                cRow--;
+                cCol--;
+            }
+
+            while(cRow < MAX_ROW_INDEX && cCol <MAX_COL_INDEX){
+                if(mapList[cRow][cCol] == order){
+                    winStep++;
+                    if(winStep>= MAX_WIN_COUNT){
+                        return true;
+                    }
+                }else{
+                    winStep--;
+                    winStep = winStep<0? 0:winStep;
+                }
+
+                console.log("line4=",cRow,cCol);
+                cRow++;
+                cCol++;
+            }
 
             return false;
         },
