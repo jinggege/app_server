@@ -10,11 +10,11 @@ var url         = require("url");
 var render     = require(global.rootUrl+'/lib/render.js');
 var d_manage   = require(global.rootUrl+'/data/d_manage.js');
 
-var C_ROOM = function(){};
+var CRoomStatus = function(){};
 var stepInfoMap = {};
 
 var instance = null;
-C_ROOM.prototype = {
+CRoomStatus.prototype = {
     getControl:function*(){
         var cUrl     = this.request.url;
         var args     = url.parse(cUrl,true).query;
@@ -91,5 +91,5 @@ C_ROOM.prototype = {
 
 };
 
-instance = instance==null? new C_ROOM() : instance;
+instance = instance==null? new CRoomStatus() : instance;
 module.exports = instance;

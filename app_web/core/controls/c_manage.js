@@ -4,8 +4,8 @@
 'use strict';
 var route     = require('koa-route');
 var c_index   = require(global.rootUrl+'/controls/c_index.js');
-var c_addroom = require(global.rootUrl+'/controls/c_addroom.js');
-var c_room = require(global.rootUrl+'/controls/c_room.js');
+var c_joinroom = require(global.rootUrl+'/controls/c_joinroom.js');
+var c_roomstatus = require(global.rootUrl+'/controls/c_roomstatus.js');
 
 
 var C_MANAGE = function(){};
@@ -20,8 +20,8 @@ C_MANAGE.prototype = {
     registerControl: function (app) {
         this.addControlToList("c_index","/",c_index.getControl);
         this.addControlToList("c_index","/index",c_index.getControl);
-        this.addControlToList("c_addroom","/addroom",c_addroom.getControl);
-        this.addControlToList("c_room","/getRoomStatus",c_room.getControl);
+        this.addControlToList("c_joinroom","/addroom",c_joinroom.getControl);
+        this.addControlToList("c_roomstatus","/getRoomStatus",c_roomstatus.getControl);
 
        for(var i=0; i<controlList.length; i++){
            var obj = controlList[i];

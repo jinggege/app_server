@@ -6,11 +6,11 @@ var url      = require("url");
 var render   = require(global.rootUrl+'/lib/render.js');
 var d_manage = require(global.rootUrl+'/data/d_manage.js');
 
-var C_ADDROOM = function(){};
+var CJoinRoom = function(){};
 
 var instance = null;
 
-C_ADDROOM.prototype = {
+CJoinRoom.prototype = {
     getControl:function*(){
         var cUrl   = this.request.url;
         var arg    = url.parse(cUrl, true).query;
@@ -43,13 +43,12 @@ C_ADDROOM.prototype = {
         renderData.uId    = uId;
         renderData.STATIC_DOMAIN = global.appConfig.app_static_domain;
         renderData.server_path   = global.appConfig.app_web_path;
-
         this.body = yield render('room_game', renderData);
     }
 
 };
 
-instance = instance==null? new C_ADDROOM() : instance;
+instance = instance==null? new CJoinRoom() : instance;
 module.exports = instance;
 
 
