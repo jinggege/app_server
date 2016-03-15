@@ -1,6 +1,9 @@
 ﻿'use strict';
-var rootUrl = __dirname;
+
+global.basePath = __dirname;
+var rootUrl    = __dirname;
 global.rootUrl = rootUrl+'/core';
+
 
 var config = require('./appconfig.js');
 var url    = require('url');
@@ -24,4 +27,8 @@ function start(){
 
 app.listen(config.app_web_port);
 trace(["app start on port "+config.app_web_port]);
+
+var str = "aaaa";
+console.log(str.split(/ +/));
+
 

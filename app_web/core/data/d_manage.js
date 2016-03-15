@@ -24,6 +24,7 @@ D_MANAGE.prototype = {
             roomObj.u1Id = -1;
             roomObj.u2Id = -1;
             roomObj.pCount = String(roomObj.currCount)+"/"+String(roomObj.maxCount);
+            roomObj.lastUpdataTime = 0;
             list.push(roomObj);
         }
         global.roomList = list;
@@ -32,7 +33,6 @@ D_MANAGE.prototype = {
     initUserInfo:function(){
         global.roomUserMap = {};
        // global.roomUserMap[roomId]=[{uId:0,uName:"",color:#000000,order:1,roomId:xxx,step:0}]
-
     },
     getRoomList:function(){
         return global.roomList;
@@ -135,9 +135,31 @@ D_MANAGE.prototype = {
                 roomInfo.u1Id = -1;
                 roomInfo.u2Id = -1;
                 roomInfo.currCount = 0;
+                roomInfo.version = 0;
                 roomInfo.pCount = "0/"+roomInfo.maxCount;
                 global.roomList[i] = roomInfo;
                 return;
+            }
+        }
+    },
+    setRoomVersion:function(roomId,version){
+        var roomInfo = null;
+        for(var i=0; i<global.roomList.length; i++){
+            roomInfo = global.roomList[i];
+            if(roomInfo.roomId = roomId){
+                roomInfo.version   = version;
+                global.roomList[i] = roomInfo;
+                return;
+            }
+        }
+    },
+
+    getRoomVersion:function(roomId){
+        var roomInfo = null;
+        for(var i=0; i<global.roomList.length; i++){
+            roomInfo = global.roomList[i];
+            if(roomInfo.roomId = roomId){
+                return roomInfo.version;
             }
         }
     }

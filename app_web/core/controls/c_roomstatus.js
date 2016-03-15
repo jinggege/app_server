@@ -1,8 +1,5 @@
 /**
  * Created by dell on 2016/2/26.
- */
-/**
- * Created by dell on 2016/2/26.
  * game server
  */
 'use strict';
@@ -38,11 +35,13 @@ CRoomStatus.prototype = {
                 if(u1Id != -1){
                     userInfo = d_manage.getRoomUserById(roomId,u1Id);
                     userList.push({uId:u1Id,color:userInfo.color,order:userInfo.order});
+                    d_manage.setRoomVersion(roomId,new Date().getTime())
                 }
 
                 if(u2Id != -1){
                     userInfo = d_manage.getRoomUserById(roomId,u2Id);
                     userList.push({uId:u2Id,color:userInfo.color,order:userInfo.order});
+                    d_manage.setRoomVersion(roomId,new Date().getTime())
                 }
 
                 response.uList = userList;
@@ -74,6 +73,7 @@ CRoomStatus.prototype = {
                 stepInfo.doUid    = args.doUid;
                 stepInfo.order    = args.order;
                 this.body = JSON.stringify(stepInfo);
+                d_manage.setRoomVersion(roomId,new Date().getTime());
                 break;
 
         }//END SWITCH
@@ -86,8 +86,11 @@ CRoomStatus.prototype = {
             stepInfoMap[roomId] = {uId:-1,step:0,order:0,activeId:-1,doUid:-1,row:0,col:0};
         }
         return stepInfoMap[roomId];
-    }
+    },
 
+    checkRoomHealth:function(roomId){
+
+    }
 
 };
 

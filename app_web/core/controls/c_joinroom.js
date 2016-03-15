@@ -45,7 +45,6 @@ CJoinRoom.prototype = {
         renderData.server_path   = global.appConfig.app_web_path;
         this.body = yield render('room_game', renderData);
     }
-
 };
 
 instance = instance==null? new CJoinRoom() : instance;
