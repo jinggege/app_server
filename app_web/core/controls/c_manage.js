@@ -8,6 +8,9 @@ var c_joinroom = require(global.rootUrl+'/controls/c_joinroom.js');
 var c_roomstatus = require(global.rootUrl+'/controls/c_roomstatus.js');
 var c_admin = require(global.basePath+'/admin/controls/c_admin.js');
 
+//good life
+var gl_index   = require(global.rootUrl+'/controls/gl_index.js');
+
 
 var C_MANAGE = function(){};
 var instance = null;
@@ -24,6 +27,8 @@ C_MANAGE.prototype = {
         this.addControlToList("c_joinroom","/addroom",c_joinroom.getControl);
         this.addControlToList("c_roomstatus","/getRoomStatus",c_roomstatus.getControl);
         this.addControlToList("c_admin","/admin",c_admin.getControl);
+
+        this.addControlToList("gl_index","/gl_index",gl_index.getControl);
 
        for(var i=0; i<controlList.length; i++){
            var obj = controlList[i];

@@ -15,7 +15,7 @@ var c_manage = require(global.rootUrl+'/controls/c_manage.js');
 var d_manage = require(global.rootUrl+'/data/d_manage.js');
 
 var app      = koa();
-//app.use(logger());
+app.use(logger());
 
 start();
 
@@ -27,8 +27,4 @@ function start(){
 
 app.listen(config.app_web_port);
 trace(["app start on port "+config.app_web_port]);
-
-var str = "aaaa";
-console.log(str.split(/ +/));
-
 
