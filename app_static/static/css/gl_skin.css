@@ -1,0 +1,132 @@
+body, div, table, ul,h3{
+    margin: 0; padding: 0; display: block;
+}
+
+body{
+    background-color: #DDDDDD;
+}
+
+li,a{
+    text-decoration: none;
+    list-style: none;
+    display: block;
+}
+
+.root{
+    width: 100%;
+    height: 100%;
+}
+
+/* ===== main  nav ===== */
+.main-top{
+    width: 1000px;
+    height: 100px;
+    background-color: #e8e8e8;
+    margin:auto;
+}
+
+.main-top .top-info{
+    width: 1000px;
+    height:30px;
+    background-color: #FFFFFF;
+    font-size: 12px;
+}
+
+.top-info span{
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    float: left;
+}
+
+.top-info .top-item{
+    float: right;
+}
+
+.top-item li{
+    float: left;
+    padding: 0 10px 0 10px;
+    line-height: 30px;
+}
+
+.top-header{
+    width: 1000px;
+    height:70px;
+}
+
+.top-header .top-log-con{
+    width:180px;
+    height: 70px;
+    background-color: #FFCCCC;
+    float: left;
+}
+
+.top-header .top-search-con{
+    width:600px;
+    height: 70px;
+    background-color: #CCFFCC;
+    float: left;
+}
+
+.top-header .top-right-con{
+    width:150px;
+    height: 70px;
+    background-color: #CCFFFF;
+    float: right;
+}
+
+
+
+/* ===========  nav ================== */
+.bd-nav-con{
+    width: 1000px;
+    height: 300px;
+    background-color: #a0ce4e;
+    margin: auto;
+}
+
+.bd-nav-con .nav-left{
+    width: 180px;
+    height: 300px;
+    float: left;
+    background-color: #e8e8e8;
+}
+
+.nav-left ul{
+    margin:auto;
+    width: 100px;
+}
+
+.nav-left .nav-left-item{
+    margin: 5px 0 0 0;
+    cursor: pointer;
+}
+
+.bd-nav-con .nav-recommend{
+    width: 820px;
+    height: 300px;
+    float: left;
+    background-color: #cccccc;
+    overflow: hidden;
+}
+
+/* ===========  bd goods ================== */
+
+.bd-goods{
+    width: 1000px;
+    height: 100%;
+    margin: auto;
+}
+
+.bd-goods-1{
+    width: 1000px;
+    height: 270px;
+    background-color: #a0ce4e;
+}
+
+.bd-goods-1 .goods-1-menu{
+    width: 1000px;
+    height: 30px;
+    background-color: #747474;
+}

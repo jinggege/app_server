@@ -2,9 +2,75 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="http://10.155.11.94/static/css/gl_skin.css">
+    <script type="text/javascript" src="http://10.155.11.94/static/js/libs/sea.js"></script>
+    <script type="text/javascript" src="http://10.155.11.94/static/js/libs/moduleconfig.js"></script>
     <title>Good Life</title>
 </head>
 <body>
+
+    <div class="root">
+        <div class="main-top">
+            <div class="top-info">
+                <span>测试测试测试</span>
+                <ul class="top-item">
+                    <li>ITEM1</li>
+                    <li>ITEM2</li>
+                    <li>ITEM3</li>
+                </ul>
+            </div>
+
+            <div class="top-header">
+                <div class="top-log-con"></div>
+                <div class="top-search-con"></div>
+                <div class="top-right-con"></div>
+            </div>
+
+        </div>
+
+        <div class="bd-nav-con">
+            <div class="nav-left">
+                <ul>
+                    <li><h3 class="nav-left-item">测试1</h3></li>
+                    <li><h3 class="nav-left-item">测试1</h3></li>
+                    <li><h3 class="nav-left-item">测试1</h3></li>
+                    <li><h3 class="nav-left-item">测试1</h3></li>
+                    <li><h3 class="nav-left-item">测试1</h3></li>
+                    <li><h3 class="nav-left-item">测试1</h3></li>
+                    <li><h3 class="nav-left-item">测试1</h3></li>
+                    <li><h3 class="nav-left-item">测试1</h3></li>
+                    <li><h3 class="nav-left-item">测试1</h3></li>
+                    <li><h3 class="nav-left-item">测试1</h3></li>
+                    <li><h3 class="nav-left-item">测试1</h3></li>
+                </ul>
+
+            </div>
+            <div class="nav-recommend"></div>
+        </div>
+
+        <div class="bd-goods">
+            <div class="bd-goods-1">
+                <div class="goods-1-menu"></div>
+                <div class="goods-1-con"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+        var classPath = [
+              'http://10.155.11.94/static/js/gl/gl_main.js'
+        ];
+        seajs.use(classPath,function(M){
+            M.init();
+        })
+
+    </script>
+
 
 </body>
 </html>
