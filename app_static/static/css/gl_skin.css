@@ -345,6 +345,19 @@ a:hover{color:#606460}
 /*======= main body end =========*/
 
 
+.ourservice{
+    width: 1000px;
+    height: 85px;
+    margin:30px auto;
+    text-align: left;
+
+}
+
+.ourservice ul li{
+    float: left;
+}
+
+
 .base-line{
     width: 100%;
     height: 5px;
