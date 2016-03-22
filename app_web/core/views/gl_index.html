@@ -11,51 +11,165 @@
 <body>
 
     <div class="root">
-        <div class="main-top">
-            <div class="top-info">
-                <span>测试测试测试</span>
+        <!-- top bar-->
+        <div class="topbar">
+            <div class="topbar-con">
+                <img align="middle" src="http://10.155.11.94/static/imgs/s_hotline.jpg" alt="服务热线" width="85" height="20">
+                <span>010-55555</span>
                 <ul class="top-item">
-                    <li>ITEM1</li>
-                    <li>ITEM2</li>
-                    <li>ITEM3</li>
+                    <li><a href="#">[登录]</a></li>
+                    <li><a href="#">[注册]</a></li>
+                    <li><a href="#">[用户中心]</a></li>
+                    <li><a href="#">[帮助]</a></li>
                 </ul>
             </div>
+        </div>
 
+        <!-- Logo , search, car -->
+        <div class="main-top">
             <div class="top-header">
-                <div class="top-log-con"></div>
-                <div class="top-search-con"></div>
-                <div class="top-right-con"></div>
+                <img class="top-log-con" src="http://10.155.11.94/static/imgs/logo.jpg" >
+                <div class="top-search-con">
+                    <ul>
+                        <li>
+                            <ul class="search-body">
+                                <li>
+                                    <div class="search-in-con">
+                                        <input class="search-in"  type="text" id="search-in">
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="search-label">搜索</span>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <div class="search-hot clear">
+
+                                <ul>
+                                    <li>
+                                        <img src="http://10.155.11.94/static/imgs/s_ico01.jpg">
+                                    </li>
+                                    <li>
+                                        <b style="padding-left: 5px;">热门搜索:</b>
+                                    </li>
+                                    <li>
+                                        <a href="#" style="padding-left: 10px;">来疯</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" style="padding-left: 10px;">来疯</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 购物车 -->
+                <div class="top-right-con">
+
+                </div>
             </div>
 
         </div>
 
-        <div class="bd-nav-con">
-            <div class="nav-left">
-                <ul>
-                    <li><h3 class="nav-left-item">测试1</h3></li>
-                    <li><h3 class="nav-left-item">测试1</h3></li>
-                    <li><h3 class="nav-left-item">测试1</h3></li>
-                    <li><h3 class="nav-left-item">测试1</h3></li>
-                    <li><h3 class="nav-left-item">测试1</h3></li>
-                    <li><h3 class="nav-left-item">测试1</h3></li>
-                    <li><h3 class="nav-left-item">测试1</h3></li>
-                    <li><h3 class="nav-left-item">测试1</h3></li>
-                    <li><h3 class="nav-left-item">测试1</h3></li>
-                    <li><h3 class="nav-left-item">测试1</h3></li>
-                    <li><h3 class="nav-left-item">测试1</h3></li>
-                </ul>
-
-            </div>
-            <div class="nav-recommend"></div>
-        </div>
-
-        <div class="bd-goods">
-            <div class="bd-goods-1">
-                <div class="goods-1-menu"></div>
-                <div class="goods-1-con"></div>
+        <!-- main nav -->
+        <div class="nav-main">
+            <div class="nav-main-body">
+                <div class="nav-menu">
+                    <a class="nav-menu-all">全部商品分类</a>
+                </div>
+                <div class="nav-items">
+                    <ul>
+                        <li><a href="#" class="main-item">来疯</a></li>
+                        <li><a href="#" class="main-item">来疯</a></li>
+                        <li><a href="#" class="main-item">来疯</a></li>
+                        <li><a href="#" class="main-item">来疯</a></li>
+                        <li><a href="#" class="main-item">来疯</a></li>
+                    </ul>
+                </div>
             </div>
 
         </div>
+
+
+        <div class="main-body">
+            <div class="bd-container">
+                <div class="bd-left">
+                    <span>推荐推荐</span>
+                    <div class="rec-con">
+
+                    </div>
+                </div>
+
+                <div class="bd-right">
+                    <div class="type-con">
+                            <ul>
+                                <!-- up -->
+                                <li>
+                                    <ul class="sub-up">
+                                        <li>
+                                            <b class="sub-title-1">主分类</b>
+                                        </li>
+                                        <li>
+                                            <b class="sub-title-1">全部</b>
+                                        </li>
+                                        <li>
+                                            <a  class="sub-title-2" href="#">来疯1</a>
+                                        </li>
+                                        <li>
+                                            <a class="sub-title-2" href="#">来疯2</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <!-- middle -->
+                                <li>
+                                    <div class="sub-middle"></div>
+                                </li>
+
+                                <!-- bottom -->
+                                <li>
+                                    <ul class="sub-up">
+                                        <li>
+                                            <b class="sub-title-1">子分类</b>
+                                        </li>
+                                        <li>
+                                            <b class="sub-title-1">全部</b>
+                                        </li>
+                                        <li>
+                                            <a  class="sub-title-2" href="#">来疯A</a>
+                                        </li>
+                                        <li>
+                                            <a class="sub-title-2" href="#">来疯B</a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                            </ul>
+                    </div>
+
+                    <!-- page container-->
+
+                    <div class="bd-page-con">
+                        <!-- todo  page control-->
+                    </div>
+
+                    <div class="display-con">
+
+                    </div>
+
+
+
+                </div>
+
+            </div><!--end bd-container -->
+
+        </div>
+
+
 
     </div>
 

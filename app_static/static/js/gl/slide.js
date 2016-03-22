@@ -8,8 +8,8 @@ define(function(require,exports, module){
     Slide.prototype = {
 
         /*
-        *imgArr = [{url:xxx,width:xxx,height:xxxx,desc:xxxx}]
-        *
+        *param:parentClassName
+        *imgArr = [{url:xxx,width:xxx,height:xxxx,desc:xxxx,href:xxxx}]
          */
         start:function(parentClassName,imgArr){
             var parent = $('.'+parentClassName);

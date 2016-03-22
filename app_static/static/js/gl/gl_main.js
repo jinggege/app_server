@@ -5,21 +5,17 @@
 define(function(require,exports,module){
 
     var $ = require('JQ');
-    var slide = require('http://10.155.11.94/static/js/gl/slide.js');
+    var recommend = require('http://10.155.11.94/static/js/gl/recommend.js');
 
     var Main = function(){};
 
     Main.prototype = {
         init:function(){
-            //this.refreshNavLeft();
-
-            var imgArr = [];
-            imgArr.push({url:'http://m1.ykimg.com/0A02000015356461BCC5A44F64AF9811'});
-            imgArr.push({url:'http://m1.ykimg.com/0A0200001534AE921DB9D9718CA874EB'});
-            imgArr.push({url:'http://m1.ykimg.com/0A02000015394F4B8B5CA8C0E3478601'});
-
-            slide.start('nav-recommend',imgArr);
-
+            var arr = [];
+            arr.push({url:'http://www.d9js.com/ProductImages/Pd_201006182310290000067_s.jpg'});
+            arr.push({url:'http://www.d9js.com/ProductImages/Pd_201006182310290000067_s.jpg'});
+            arr.push({url:'http://www.d9js.com/ProductImages/Pd_201006182310290000067_s.jpg'});
+            recommend.show($('.rec-con'),arr);
         },
 
         refreshNavLeft:function(){
