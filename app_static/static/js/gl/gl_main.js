@@ -12,9 +12,21 @@ define(function(require,exports,module){
     Main.prototype = {
         init:function(){
             var arr = [];
-            arr.push({url:'http://www.d9js.com/ProductImages/Pd_201006182310290000067_s.jpg'});
-            arr.push({url:'http://www.d9js.com/ProductImages/Pd_201006182310290000067_s.jpg'});
-            arr.push({url:'http://www.d9js.com/ProductImages/Pd_201006182310290000067_s.jpg'});
+            arr.push(
+                {url:'http://www.d9js.com/ProductImages/Pd_201006182310290000067_s.jpg',
+                 label:'xxxxx',
+                 price:'8888'
+                });
+            arr.push(
+                {url:'http://www.d9js.com/ProductImages/Pd_201006182310290000067_s.jpg',
+                    label:'xxxxx',
+                    price:'8888'
+                });
+            arr.push(
+                {url:'http://www.d9js.com/ProductImages/Pd_201006182310290000067_s.jpg',
+                    label:'xxxxx',
+                    price:'8888'
+                });
             recommend.show($('.rec-con'),arr);
         },
 

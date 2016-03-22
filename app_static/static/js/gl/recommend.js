@@ -17,7 +17,10 @@ define(function(require,exports,module){
             var html = [
                 '<div class="recommend-item-con">',
                     '<img src="'+data.url+'">',
-                    '<div class="recommend-item-desc"></div>',
+                    '<div class="recommend-item-label">',
+                        '<a href="#">'+data.label+'</a>',
+                        '<a>'+data.price+'</a>',
+                    '</div>',
                 '</div>'
             ].join('');
 
