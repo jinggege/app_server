@@ -260,6 +260,19 @@ a:hover{color:#606460}
 }
 
 
+/*-- about goods item --*/
+.goods-item{
+    width: 160px;
+    height: 180px;
+}
+
+.goods-item .goods-img{
+    width: 160px;
+    height: 160px;
+}
+
+
+
 
 
 /*-- right --*/

@@ -16,13 +16,17 @@ define(function(require,exports,module){
         recommendItem:function(data){
             var html = [
                 '<div class="recommend-item-con">',
-                    '<img src="'+data.url+'">',
+                    '<a href="#">',
+                        '<img src="'+data.url+'">',
+                    '</a>',
                     '<div class="recommend-item-label">',
                         '<a href="#">'+data.label+'</a>',
                         '<a>'+data.price+'</a>',
                     '</div>',
                 '</div>'
             ].join('');
+
+
 
             return $(html);
         }
