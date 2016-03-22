@@ -18,13 +18,17 @@ define(function(require,exports,module){
 
         getItem:function(data){
             var html = [
-                '<div class="goods-item">',
-                    '<a>',
-                        '<img class="goods-img" src="'+data.url+'">',
-                    '</a>',
-                    '<span class="g-item-label">'+data.label+'</span>',
-                    '<span class="g-item-price">'+data.price+'</span>',
-                '</div>'
+                '<ul class="goods-list">',
+                    '<li>',
+                        '<div class="goods-item">',
+                            '<a href="#">',
+                                '<img class="goods-img" src="'+data.url+'">',
+                            '</a>',
+                            '<span class="g-item-label">'+data.label+'</span>',
+                            '<span class="g-item-price">'+data.price+'</span>',
+                        '</div>',
+                    '</li>',
+                '</ul>'
             ].join('');
 
             return $(html);

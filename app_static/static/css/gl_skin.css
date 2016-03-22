@@ -261,9 +261,16 @@ a:hover{color:#606460}
 
 
 /*-- about goods item --*/
+
+.goods-list{
+    float: left;
+}
+
 .goods-item{
     width: 160px;
-    height: 180px;
+    height: 220px;
+    border: 1px dashed #DDDDDD;
+    margin: 10px  0 0 10px;
 }
 
 .goods-item .goods-img{

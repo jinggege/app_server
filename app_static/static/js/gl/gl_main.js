@@ -36,6 +36,8 @@ define(function(require,exports,module){
             goodsArr.push({url:'http://www.d9js.com/ProductImages/Pd_201602041830320000039_s.jpg',label:'EEE',price:'5555'});
             goodsArr.push({url:'http://www.d9js.com/ProductImages/Pd_201602041830320000039_s.jpg',label:'EEE',price:'5555'});
             goodsArr.push({url:'http://www.d9js.com/ProductImages/Pd_201602041830320000039_s.jpg',label:'EEE',price:'5555'});
+            goodsArr.push({url:'http://www.d9js.com/ProductImages/Pd_201602041830320000039_s.jpg',label:'EEE',price:'5555'});
+            goodsArr.push({url:'http://www.d9js.com/ProductImages/Pd_201602041830320000039_s.jpg',label:'EEE',price:'5555'});
 
             goods.show($('.display-con'),goodsArr);
 
