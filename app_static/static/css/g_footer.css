@@ -1,0 +1,20 @@
+
+.footer-ourservice{
+    width: 1000px;
+    height: 85px;
+    margin:30px auto;
+    text-align: left;
+
+}
+
+.footer-ourservice ul li{
+    float: left;
+}
+
+
+.footer-base-line{
+    width: 100%;
+    height: 5px;
+    background-color: #FF9933;
+    margin:20px 0 0 0;
+}

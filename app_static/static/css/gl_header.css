@@ -1,0 +1,154 @@
+
+/*======header bar==========*/
+.header-bar{
+    width: 100%;
+    height: 23px;
+    border-bottom: 1px solid #DDDDDD;
+    font-size: 12px;
+}
+
+.header-bar .bar-container{
+    width: 1000px;
+    height: 23px;
+    margin: auto;
+}
+
+.header-bar .bar-container span{
+    width: 100px;
+    height: 23px;
+    line-height: 23px;
+    float: left;
+    padding: 0 10px 0 10px;
+    display: block;
+    line-height: 23px;
+}
+
+.header-bar .bar-container img{
+    float:left;
+    margin:2px 0 0 0;
+}
+
+.header-bar .bar-item{
+    float: right;
+}
+.header-bar .bar-item li{
+    float: left;
+    line-height: 23px;
+    padding: 0 10px 0 0;
+    color:#000000;
+}
+
+/*======header search==========*/
+
+.header-search{
+    width: 100%;
+    height: 79px;
+    margin:auto;
+}
+
+.search-container{
+    width: 1000px;
+    height:79px;
+    margin: auto;
+}
+
+.search-container .header-logo{
+    width:180px;
+    height: 70px;
+    background-color: #FFCCCC;
+    float: left;
+}
+
+.search-container .search-panel{
+    width:500px;
+    height: 60px;
+    float: left;
+    margin:15px 0 0 50px;
+}
+
+.search-panel .search-in-con{
+    width: 380px;
+    height: 35px;
+    background-color: #FF9933;
+}
+
+.search-panel .search-in{
+    width: 320px;
+    height: 29px;
+    margin: 2px 0 0 2px;
+}
+
+.search-panel .search-label{
+    width: 55px;
+    height: 35px;
+    line-height: 35px;
+    color:#FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #FF9933;
+    display: block;
+    cursor:pointer;
+}
+
+.search-panel .search-hot{
+    width: 300px;
+    height: 20px;
+    font-size: 12px;
+    padding: 5px 0 0 0;
+}
+
+.search-hot img,b,a{
+    float: left;
+}
+
+.search-container .top-right-con{
+
+}
+
+/*======header navigation==========*/
+
+.header-nav{
+    width: 100%;
+    height: 35px;
+    background-color: #FF9933;
+    border-bottom: 3px solid #993333;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.nav-container{
+    width: 1000px;
+    height: 100%;
+    margin: auto;
+}
+
+.nav-menu-all{
+    width: 210px;
+    height: 38px;
+    line-height: 38px;
+    color:#FFFFFF;
+    background-color: #993333;
+    text-align: center;
+    float: left;
+}
+
+.nav-menu-all:hover{
+    color:#FFFFFF;
+}
+
+.nav-menu-items ul li{
+    float: left;
+}
+
+.nav-menu-items a{
+    width: 100px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border-right: 2px solid #993333;
+    margin:5px 0 0 0;
+}
+.nav-menu-items a:hover{
+    color:#FFFFFF;
+}
