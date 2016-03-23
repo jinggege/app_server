@@ -1,4 +1,4 @@
-{% include 'header.html'%}
+{% include 'gl_header.html'%}
 
 <body>
     <div class="root-login">
@@ -36,10 +36,20 @@
 
         </div>
 
-        {% include "footer.html" %}
-
+        {% include "gl_footer.html" %}
 
     </div>
+
+
+    <script>
+        seajs.use('{{STATIC_DOMAIN}}/static/js/gl/gl_login.js',function(LG){
+            LG.init();
+        })
+
+
+    </script>
+
+
 
 </body>
 </html>

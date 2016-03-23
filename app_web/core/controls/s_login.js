@@ -11,8 +11,15 @@ var GL_LOGIN = function(){};
 var instance = null;
 GL_LOGIN.prototype = {
     getControl:function*(){
+        console.log(this.request.method);
+        if(this.request.method=='POST'){
+            //this.redirect('/gl_index');   post 跳转失效？？？？？
+            //console.log('redirect');
+            return;
+        }
+
+
         var renderData = {};
-        renderData.desc = "Room List";
         renderData.STATIC_DOMAIN = global.appConfig.app_static_domain;
         this.body = yield render('gl_login', renderData);
     }

@@ -9,8 +9,8 @@ var c_roomstatus = require(global.rootUrl+'/controls/c_roomstatus.js');
 var c_admin = require(global.basePath+'/admin/controls/c_admin.js');
 
 //good life
-var gl_index   = require(global.rootUrl+'/controls/gl_index.js');
-var gl_login    = require(global.rootUrl+'/controls/gl_login.js');
+var s_index   = require(global.rootUrl+'/controls/s_index.js');
+var s_login    = require(global.rootUrl+'/controls/s_login.js');
 
 
 var C_MANAGE = function(){};
@@ -29,13 +29,16 @@ C_MANAGE.prototype = {
         this.addControlToList("c_roomstatus","/getRoomStatus",c_roomstatus.getControl);
         this.addControlToList("c_admin","/admin",c_admin.getControl);
 
-        this.addControlToList("gl_index","/gl_index",gl_index.getControl);
-        this.addControlToList("gl_login","/gl_login",gl_login.getControl);
+        this.addControlToList("gl_index","/gl_index",s_index.getControl);
+        this.addControlToList("gl_login","/gl_login",s_login.getControl);
 
        for(var i=0; i<controlList.length; i++){
            var obj = controlList[i];
            app.use(route.get(obj.route,obj.control));
        }
+
+        //==post==
+        app.use(route.post('/gl_login',s_login.getControl));
     },
     addControlToList:function(key,route,control){
         controlList.push({name:key,route:route,control:control});
