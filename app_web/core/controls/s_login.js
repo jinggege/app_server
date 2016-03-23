@@ -15,9 +15,9 @@ GL_LOGIN.prototype = {
         if(this.request.method=='POST'){
             //this.redirect('/gl_index');   post 跳转失效？？？？？
             //console.log('redirect');
+            this.body = 'ok';
             return;
         }
-
 
         var renderData = {};
         renderData.STATIC_DOMAIN = global.appConfig.app_static_domain;

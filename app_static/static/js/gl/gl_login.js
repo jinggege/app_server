@@ -10,20 +10,21 @@ define(function(require,exports,module){
             var domName = $('.u-in-name');
             var domPassword = $('.u-in-password');
 
-            if(domName=='' || domPassword==''){
-                alert('用户名或密码不能为空!');
-                return;
-            }
-
             $('.btn-login').on('click',function(){
+                if(domName.val()=='' || domPassword.val()==''){
+                    alert('用户名或密码不能为空!');
+                    return;
+                }
+
                     $.post(
                         '/gl_login',
                         {
-                            uName:'xxx',
-                            uPassword:'uuuuu'
+                            uName:domName.val(),
+                            uPassword:domPassword.val()
                         },
                         function(data,status){
                             console.log(data,status);
+                            location.href = '/gl_index';
                         }
                     );
 
