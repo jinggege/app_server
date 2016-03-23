@@ -376,7 +376,6 @@ a:hover{color:#606460}
 .login-panel{
     width: 815px;
     height: 450px;
-    border:1px solid #cccccc;
     margin: 50px auto;
 }
 
@@ -391,6 +390,70 @@ a:hover{color:#606460}
     color: #FF9933;
     padding: 18px 0 0 20px;
     display: block;
+}
 
+
+.login-window{
+    width: 500px;
+    height: 270px;
+    margin: 90px auto 0 auto;
+    color:#000000;
+    font-size: 14px;
+}
+
+.login-window .u-row{
+    float: left;
+}
+
+.login-window li{
+    height: 30px;
+    margin:20px 0 0 0;
+}
+
+.login-window b{
+    display: block;
+    width: 100px;
+    height: 28px;
+    line-height: 28px;
+    text-align: right;
+}
+
+.login-window .u-in{
+    width: 200px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #FF9933;
+    margin:0 0 0 20px;
+}
+
+.login-window .login-btn{
+    width: 400px;
+    height: 45px;
+    margin: auto;
+}
+
+.login-window a{
+    display: block;
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+    background-color:#FF9933 ;
+    color:#FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    margin: 20px 0 0 0;
+}
+
+.login-window .btn-reg{
+    background-color:#6699cc ;
+    margin: 20px 0 0 10px;
+}
+
+.bottom-line{
+    width: 100%;
+    height: 5px;
+    background-color:#FF9933 ;
 }
 
