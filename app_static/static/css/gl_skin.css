@@ -110,7 +110,6 @@ a:hover{color:#606460}
     float:left;
 }
 
-
 .search-body .search-in{
     width: 320px;
     height: 29px;
@@ -424,6 +423,7 @@ a:hover{color:#606460}
     line-height: 28px;
     border: 1px solid #FF9933;
     margin:0 0 0 20px;
+    padding-left: 5px;
 }
 
 .login-window .login-btn{
