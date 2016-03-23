@@ -345,7 +345,7 @@ a:hover{color:#606460}
 /*======= main body end =========*/
 
 
-.ourservice{
+.footer-ourservice{
     width: 1000px;
     height: 85px;
     margin:30px auto;
@@ -353,12 +353,12 @@ a:hover{color:#606460}
 
 }
 
-.ourservice ul li{
+.footer-ourservice ul li{
     float: left;
 }
 
 
-.base-line{
+.footer-base-line{
     width: 100%;
     height: 5px;
     background-color: #FF9933;
