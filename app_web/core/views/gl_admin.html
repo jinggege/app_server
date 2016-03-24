@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <style>
+        body,div,table{margin:0;padding:0;}
+        span{display: block;}
+
+        .data-list .btn-del{
+            width: 50px;
+            height: 25px;
+            line-height: 25px;
+            background-color: #FF9933;
+            color:#FFFFFF;
+            text-align: center;
+            cursor: pointer;
+            margin: auto;
+        }
+
+        .data-list td{
+            width: 100px;
+            border: 1px solid #e8e8e8;
+            text-align: center;
+        }
+
+        .row-style-0{
+            background-color: #e3e3e3;
+        }
+
+        .row-style-1{
+            background-color: #cccccc;
+        }
+
+
+    </style>
+
+
+
+    <title></title>
+</head>
+<body>
+
+        <table class="data-list">
+
+            {% for key, val in allGoodsList %}
+            <tr class="row-style-{{  Number(key)%2 }}">
+                <td class="g-id">{{val['gId']}}</td>
+                <td class="g-label">{{val['label']}}</td> <td><span class="btn-del">del</span></td>
+            </tr>
+            {% endfor %}
+
+        </table>
+
+
+
+</body>
+</html>
