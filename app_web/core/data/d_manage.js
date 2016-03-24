@@ -167,5 +167,6 @@ D_MANAGE.prototype = {
 };
 
 
+
 instance = instance == null? new D_MANAGE() : instance;
 module.exports = instance;

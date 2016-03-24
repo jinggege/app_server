@@ -21,5 +21,6 @@ GL_INDEX.prototype = {
 
 };
 
+
 instance = instance==null? new GL_INDEX() : instance;
 module.exports = instance;

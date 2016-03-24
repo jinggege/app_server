@@ -12,3 +12,5 @@ module.exports = {
     app_static_domain:"http://10.155.11.94"
 
 };
+
+

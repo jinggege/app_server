@@ -11,6 +11,7 @@ var koa    = require('koa');
 var logger = require('koa-logger');
 
 var trace    = require(global.rootUrl+'/lib/trace.js');
+var singleC  = require(global.rootUrl+'/lib/singleclass.js');
 var c_manage = require(global.rootUrl+'/controls/c_manage.js');
 var d_manage = require(global.rootUrl+'/data/d_manage.js');
 
@@ -21,6 +22,8 @@ start();
 
 function start(){
     global.appConfig = config;
+
+    singleC.start();
     d_manage.start();
     c_manage.start(app);
 }
