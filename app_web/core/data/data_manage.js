@@ -10,12 +10,18 @@ var D_MANAGE = function(){};
 D_MANAGE.prototype = {
     start:function(){
         this.allGoodsList = [];
+        this.recommendList = [];
 
         this.createGoods();
+        this.createRecommendData();
     },
 
     getAllGoods:function(){
         return this.allGoodsList;
+    },
+
+    getRecommendList:function(){
+        return this.recommendList;
     },
 
     createGoods:function(){
@@ -40,6 +46,34 @@ D_MANAGE.prototype = {
                 gId:Math.floor(Math.random()*9999)
             }
         );
+
+    },
+
+    createRecommendData:function(){
+
+        this.recommendList.push(
+            {url:'http://www.d9js.com/ProductImages/Pd_201006182310290000067_s.jpg',
+                label:'xxxxx',
+                price:Math.floor(Math.random()*100),
+                gId:Math.floor(Math.random()*9999)
+            }
+        );
+        this.recommendList.push(
+            {url:'http://www.d9js.com/ProductImages/Pd_201006182310290000067_s.jpg',
+                label:'xxxxx',
+                price:Math.floor(Math.random()*100),
+                gId:Math.floor(Math.random()*9999)
+            }
+        );
+        this.recommendList.push(
+            {url:'http://www.d9js.com/ProductImages/Pd_201006182310290000067_s.jpg',
+                label:'xxxxx',
+                price:Math.floor(Math.random()*100),
+                gId:Math.floor(Math.random()*9999)
+            }
+        );
+
+
 
     }
 

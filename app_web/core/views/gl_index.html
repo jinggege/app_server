@@ -10,7 +10,12 @@
                     {% for key, val in allGoodsList %}
                         {   {% for data in val %}  {{loop.key}}:'{{data}}'{% if !loop.last %},{% endif %}  {% endfor %}  } {% if !loop.last %},{% endif %}
                     {% endfor %}
-                ]
+                ],
+                 recommendList:[
+                     {% for key, val in recommendList %}
+                        {   {% for data in val %}  {{loop.key}}:'{{data}}'{% if !loop.last %},{% endif %}  {% endfor %}  } {% if !loop.last %},{% endif %}
+                     {% endfor %}
+                 ]
 
             }
 

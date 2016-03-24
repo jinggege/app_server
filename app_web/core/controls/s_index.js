@@ -19,6 +19,7 @@ GL_INDEX.prototype = {
         var renderData = {};
         renderData.STATIC_DOMAIN = global.appConfig.app_static_domain;
         renderData.allGoodsList = dataM.getAllGoods();
+        renderData.recommendList = dataM.getRecommendList();
        this.body = yield render('gl_index', renderData);
     }
 
