@@ -9,7 +9,6 @@ define(function(require,exports,module){
 
     GoodsItem.prototype = {
         show:function(container,arr){
-
             for(var i=0; i<arr.length; i++){
                 $(container).append(this.getItem(arr[i]));
             }
@@ -20,7 +19,7 @@ define(function(require,exports,module){
                 '<ul class="goods-list">',
                     '<li>',
                         '<div class="goods-item">',
-                            '<a href="/gl_detail?gid='+data.id +'">',
+                            '<a href="/gl_detail?gid='+data.gId +'">',
                                 '<img class="goods-img" src="'+data.url+'">',
                             '</a>',
                             '<span class="g-item-label">'+data.label+'</span>',

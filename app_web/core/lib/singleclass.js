@@ -3,12 +3,16 @@
  * 单例管理类
  */
 
+var app_config = require('../../appconfig.js');
+
 var SingleClass = function(){};
 
 SingleClass.prototype = {
     start:function(){
         global.SingleClass = new SingleClass();
         this.classMap = {};
+
+        this.CKEY = app_config.C_KEY;
     },
     registerClass:function(className,instance) {
         this.classMap[className] = instance;
@@ -16,6 +20,10 @@ SingleClass.prototype = {
 
     getSingleClass:function(className){
         return this.classMap[className];
+    },
+
+    getCKEY:function(){
+        return this.CKEY;
     }
 
 };

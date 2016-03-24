@@ -12,8 +12,8 @@ var logger = require('koa-logger');
 
 var trace    = require(global.rootUrl+'/lib/trace.js');
 var singleC  = require(global.rootUrl+'/lib/singleclass.js');
-var c_manage = require(global.rootUrl+'/controls/c_manage.js');
-var d_manage = require(global.rootUrl+'/data/d_manage.js');
+var control_manage = require(global.rootUrl+'/controls/control_manage.js');
+var data_manage = require(global.rootUrl+'/data/data_manage.js');
 
 var app      = koa();
 app.use(logger());
@@ -21,13 +21,17 @@ app.use(logger());
 start();
 
 function start(){
-    global.appConfig = config;
+    global.appConfig = config.APP_CONFIG;
 
     singleC.start();
-    d_manage.start();
-    c_manage.start(app);
+    singleC.registerClass(singleC.getCKEY().DATA_MANAGE,data_manage);
+    singleC.registerClass(singleC.getCKEY().CONTROL_MANAGE,control_manage);
+
+    singleC.getSingleClass(singleC.getCKEY().DATA_MANAGE).start();
+    singleC.getSingleClass(singleC.getCKEY().CONTROL_MANAGE).start(app);
+
 }
 
-app.listen(config.app_web_port);
-trace(["app start on port "+config.app_web_port]);
+app.listen(config.APP_CONFIG.app_web_port);
+trace(["app start on port "+config.APP_CONFIG.app_web_port]);
 

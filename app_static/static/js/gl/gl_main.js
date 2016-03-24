@@ -31,22 +31,8 @@ define(function(require,exports,module){
             recommend.show($('.rec-con'),arr);
 
 
-            var goodsArr = [];
-            goodsArr.push({url:'http://www.d9js.com/ProductImages/Pd_201602041830320000039_s.jpg',
-                label:'EEE',price:'5555',
-                id: Math.ceil(Math.random()*10000)
-            });
-            goodsArr.push({url:'http://www.d9js.com/ProductImages/Pd_201602041830320000039_s.jpg',
-                label:'EEE',price:'5555',
-                id: Math.ceil(Math.random()*10000)
-            });
 
-            goodsArr.push({url:'http://www.d9js.com/ProductImages/Pd_201602041830320000039_s.jpg',
-                label:'EEE',price:'5555',
-                id: Math.ceil(Math.random()*10000)
-            });
-
-            goods.show($('.display-con'),goodsArr);
+            goods.show($('.display-con'),window.CATCH.goodsList);
 
         },
 

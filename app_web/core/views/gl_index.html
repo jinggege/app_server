@@ -1,5 +1,21 @@
 {% include "gl_header.html" %}
 
+
+        <script>
+
+            window.CATCH =
+            {
+                //渲染数据
+                goodsList:[
+                    {% for key, val in allGoodsList %}
+                        {   {% for data in val %}  {{loop.key}}:'{{data}}'{% if !loop.last %},{% endif %}  {% endfor %}  } {% if !loop.last %},{% endif %}
+                    {% endfor %}
+                ]
+
+            }
+
+        </script>
+
         <!-- main nav -->
         <div class="main-container">
             <div class="bd-container">
