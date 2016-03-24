@@ -19,6 +19,7 @@ li,a{
 
 a:link{color:#000000}
 a:hover{color:#606460}
+b{display: block;}
 
 .clear{clear:both;}
 .vertical{float: left;}

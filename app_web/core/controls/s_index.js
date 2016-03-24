@@ -16,7 +16,9 @@ GL_INDEX.prototype = {
         renderData.desc = "Room List";
         renderData.roomList = d_manage.getRoomList();
         renderData.STATIC_DOMAIN = global.appConfig.app_static_domain;
-        this.body = yield render('gl_index', renderData);
+       //this.body = yield render('gl_index', renderData);
+
+        this.body = yield render('gl_detail', renderData);
     }
 
 };
