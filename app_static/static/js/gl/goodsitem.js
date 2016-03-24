@@ -13,7 +13,6 @@ define(function(require,exports,module){
             for(var i=0; i<arr.length; i++){
                 $(container).append(this.getItem(arr[i]));
             }
-
         },
 
         getItem:function(data){
@@ -33,7 +32,6 @@ define(function(require,exports,module){
 
             return $(html);
         }
-
 
     };
 
