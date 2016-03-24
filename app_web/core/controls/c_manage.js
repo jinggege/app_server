@@ -11,6 +11,7 @@ var c_admin = require(global.basePath+'/admin/controls/c_admin.js');
 //good life
 var s_index   = require(global.rootUrl+'/controls/s_index.js');
 var s_login    = require(global.rootUrl+'/controls/s_login.js');
+var s_detail    = require(global.rootUrl+'/controls/s_detail.js');
 
 
 var C_MANAGE = function(){};
@@ -31,6 +32,7 @@ C_MANAGE.prototype = {
 
         this.addControlToList("gl_index","/gl_index",s_index.getControl);
         this.addControlToList("gl_login","/gl_login",s_login.getControl);
+        this.addControlToList("gl_detail","/gl_detail",s_detail.getControl);
 
        for(var i=0; i<controlList.length; i++){
            var obj = controlList[i];

@@ -20,7 +20,7 @@ define(function(require,exports,module){
                 '<ul class="goods-list">',
                     '<li>',
                         '<div class="goods-item">',
-                            '<a href="#">',
+                            '<a href="/gl_detail?gid='+data.id +'">',
                                 '<img class="goods-img" src="'+data.url+'">',
                             '</a>',
                             '<span class="g-item-label">'+data.label+'</span>',

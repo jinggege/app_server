@@ -32,12 +32,19 @@ define(function(require,exports,module){
 
 
             var goodsArr = [];
-            goodsArr.push({url:'http://www.d9js.com/ProductImages/Pd_201602041830320000039_s.jpg',label:'EEE',price:'5555'});
-            goodsArr.push({url:'http://www.d9js.com/ProductImages/Pd_201602041830320000039_s.jpg',label:'EEE',price:'5555'});
-            goodsArr.push({url:'http://www.d9js.com/ProductImages/Pd_201602041830320000039_s.jpg',label:'EEE',price:'5555'});
-            goodsArr.push({url:'http://www.d9js.com/ProductImages/Pd_201602041830320000039_s.jpg',label:'EEE',price:'5555'});
-            goodsArr.push({url:'http://www.d9js.com/ProductImages/Pd_201602041830320000039_s.jpg',label:'EEE',price:'5555'});
-            goodsArr.push({url:'http://www.d9js.com/ProductImages/Pd_201602041830320000039_s.jpg',label:'EEE',price:'5555'});
+            goodsArr.push({url:'http://www.d9js.com/ProductImages/Pd_201602041830320000039_s.jpg',
+                label:'EEE',price:'5555',
+                id: Math.ceil(Math.random()*10000)
+            });
+            goodsArr.push({url:'http://www.d9js.com/ProductImages/Pd_201602041830320000039_s.jpg',
+                label:'EEE',price:'5555',
+                id: Math.ceil(Math.random()*10000)
+            });
+
+            goodsArr.push({url:'http://www.d9js.com/ProductImages/Pd_201602041830320000039_s.jpg',
+                label:'EEE',price:'5555',
+                id: Math.ceil(Math.random()*10000)
+            });
 
             goods.show($('.display-con'),goodsArr);
 

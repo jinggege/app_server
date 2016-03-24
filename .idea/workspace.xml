@@ -26,28 +26,28 @@
       <file leaf-file-name="gl_skin.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_static/static/css/gl_skin.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="110" max-vertical-offset="3850">
-              <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2890" max-vertical-offset="3850">
+              <caret line="159" column="0" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gl_detail.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_static/static/css/gl_detail.css">
+      <file leaf-file-name="gl_header.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app_web/core/views/gl_header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="624" max-vertical-offset="1188">
-              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state vertical-scroll-proportion="-12.225806" vertical-offset="1425" max-vertical-offset="1980">
+              <caret line="82" column="10" selection-start-line="82" selection-start-column="10" selection-end-line="82" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gl_detail.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app_web/core/views/gl_detail.html">
+      <file leaf-file-name="s_index.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app_web/core/controls/s_index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8479657" vertical-offset="132" max-vertical-offset="770">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.5798611" vertical-offset="84" max-vertical-offset="660">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -63,7 +63,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app_static/static/js/gamec.js" />
         <option value="$PROJECT_DIR$/app_web/core/controls/c_index.js" />
         <option value="$PROJECT_DIR$/app_web/core/views/index.html" />
         <option value="$PROJECT_DIR$/app_static/static/css/g_room.css" />
@@ -94,7 +93,6 @@
         <option value="$PROJECT_DIR$/app_static/static/js/gl/slide.js" />
         <option value="$PROJECT_DIR$/app_static/static/js/gl/recommand.js" />
         <option value="$PROJECT_DIR$/app_static/static/js/gl/recommend.js" />
-        <option value="$PROJECT_DIR$/app_static/static/js/gl/gl_main.js" />
         <option value="$PROJECT_DIR$/app_static/static/js/gl/gl_login.html" />
         <option value="$PROJECT_DIR$/app_web/core/views/gl_index_back.html" />
         <option value="$PROJECT_DIR$/app_static/static/css/gl_header.css" />
@@ -104,16 +102,18 @@
         <option value="$PROJECT_DIR$/app_web/core/views/header.html" />
         <option value="$PROJECT_DIR$/app_web/core/controls/gl_login.js" />
         <option value="$PROJECT_DIR$/app_web/core/views/gl_login.html" />
-        <option value="$PROJECT_DIR$/app_web/core/controls/c_manage.js" />
         <option value="$PROJECT_DIR$/app_web/core/controls/s_login.js" />
         <option value="$PROJECT_DIR$/app_static/static/js/gl/gl_login.js" />
         <option value="$PROJECT_DIR$/app_web/core/views/gl_index.html" />
-        <option value="$PROJECT_DIR$/app_static/static/js/gl/goodsitem.js" />
-        <option value="$PROJECT_DIR$/app_web/core/controls/s_index.js" />
-        <option value="$PROJECT_DIR$/app_web/core/views/gl_header.html" />
         <option value="$PROJECT_DIR$/app_static/static/css/gl_skin.css" />
         <option value="$PROJECT_DIR$/app_web/core/views/gl_detail.html" />
         <option value="$PROJECT_DIR$/app_static/static/css/gl_detail.css" />
+        <option value="$PROJECT_DIR$/app_static/static/js/gl/gl_main.js" />
+        <option value="$PROJECT_DIR$/app_static/static/js/gl/goodsitem.js" />
+        <option value="$PROJECT_DIR$/app_web/core/controls/c_manage.js" />
+        <option value="$PROJECT_DIR$/app_web/core/controls/s_detail.js" />
+        <option value="$PROJECT_DIR$/app_web/core/views/gl_header.html" />
+        <option value="$PROJECT_DIR$/app_web/core/controls/s_index.js" />
       </list>
     </option>
   </component>
@@ -305,32 +305,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app_server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app_server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app_static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="gl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -469,7 +443,7 @@
     <editor active="true" />
     <layout>
       <window_info id="变化" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33035713" sideWeight="0.49963155" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23086734" sideWeight="0.49963155" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26612306" sideWeight="0.49923897" order="0" side_tool="false" content_ui="combo" />
@@ -510,13 +484,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app_web/node_modules/humanize-number/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="639">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_web/node_modules/keygrip/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7574335" vertical-offset="594" max-vertical-offset="1518">
@@ -693,13 +660,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_static/static/js/gl/gl_main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="611" max-vertical-offset="1518">
-          <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_web/core/views/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="565">
@@ -744,14 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_static/static/css/gl_login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.93135726" vertical-offset="1339" max-vertical-offset="2068">
-          <caret line="88" column="1" selection-start-line="88" selection-start-column="1" selection-end-line="88" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_static/static/css/gl_header.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.44617784" vertical-offset="0" max-vertical-offset="3498">
@@ -771,6 +723,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7068273" vertical-offset="660" max-vertical-offset="1320">
           <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -782,26 +735,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_web/core/controls/c_manage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.69138277" vertical-offset="513" max-vertical-offset="1210">
-          <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_web/core/controls/c_roomstatus.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.8763103" vertical-offset="1188" max-vertical-offset="2266">
           <caret line="35" column="47" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_web/core/controls/s_login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7688266" vertical-offset="1" max-vertical-offset="770">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -817,63 +754,106 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5394046" vertical-offset="0" max-vertical-offset="924">
           <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_static/static/js/gl/goodsitem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="1034">
-          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_web/core/views/gl_index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33755943" vertical-offset="1173" max-vertical-offset="1804">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_web/core/controls/s_index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5582329" vertical-offset="206" max-vertical-offset="704">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_web/core/views/gl_header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42398286" vertical-offset="0" max-vertical-offset="1980">
-          <caret line="9" column="71" selection-start-line="9" selection-start-column="71" selection-end-line="9" selection-end-column="71" />
           <folding>
-            <element signature="n#style#0;n#b#0;n#div#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#0#40#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_static/static/css/gl_skin.css">
+    <entry file="file://$PROJECT_DIR$/app_static/static/css/gl_login.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="110" max-vertical-offset="3850">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_static/static/css/gl_detail.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="624" max-vertical-offset="1188">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1570" max-vertical-offset="2068">
+          <caret line="80" column="28" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app_web/core/views/gl_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8479657" vertical-offset="132" max-vertical-offset="770">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state vertical-scroll-proportion="-7.193548" vertical-offset="173" max-vertical-offset="880">
+          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_static/static/css/gl_detail.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65983605" vertical-offset="1284" max-vertical-offset="1782">
+          <caret line="73" column="25" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_static/static/js/gl/gl_main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45740741" vertical-offset="589" max-vertical-offset="1672">
+          <caret line="38" column="36" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_web/core/controls/s_login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6111111" vertical-offset="198" max-vertical-offset="770">
+          <caret line="24" column="5" selection-start-line="12" selection-start-column="4" selection-end-line="24" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_web/core/controls/c_manage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="466" max-vertical-offset="1254">
+          <caret line="38" column="53" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_static/static/js/gl/goodsitem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4030613" vertical-offset="0" max-vertical-offset="1034">
+          <caret line="25" column="79" selection-start-line="25" selection-start-column="79" selection-end-line="25" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_web/core/controls/s_detail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.60714287" vertical-offset="114" max-vertical-offset="506">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_web/core/views/gl_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7135135" vertical-offset="0" max-vertical-offset="1804">
+          <caret line="18" column="63" selection-start-line="18" selection-start-column="63" selection-end-line="18" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_static/static/css/gl_skin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2890" max-vertical-offset="3850">
+          <caret line="159" column="0" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_web/core/views/gl_header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.225806" vertical-offset="1425" max-vertical-offset="1980">
+          <caret line="82" column="10" selection-start-line="82" selection-start-column="10" selection-end-line="82" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_web/core/controls/s_index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5798611" vertical-offset="84" max-vertical-offset="660">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
