@@ -18,7 +18,7 @@ define(function(require,exports,module){
                 var target = $(event.target);
                 var gId = target.attr('gid');
 
-                var url = '/gl_admin?ac=del&'+'gid='+gId;
+                var url = '/gl_admin?ac=gdel&'+'gid='+gId;
 
                 $.get(url,function(data,status){
                     if(status=='success'){
@@ -29,7 +29,6 @@ define(function(require,exports,module){
                     }
 
                 });
-
             })
         }
 

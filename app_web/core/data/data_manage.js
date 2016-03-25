@@ -5,6 +5,8 @@
 
 'use strict';
 
+var util = require(global.rootUrl+'/lib/util.js');
+
 var D_MANAGE = function(){};
 
 D_MANAGE.prototype = {
@@ -24,6 +26,7 @@ D_MANAGE.prototype = {
         return this.recommendList;
     },
 
+    /** 删除*/
     delGoodsById:function(gId){
         for(var i=0; i<this.allGoodsList.length; i++){
             if(String(gId) == String(this.allGoodsList[i].gId)){
@@ -35,26 +38,34 @@ D_MANAGE.prototype = {
         return false;
     },
 
+    /** 增加 */
+    increaseGood:function(gInfo){
+        gInfo.gId = util.createGid();
+        this.allGoodsList.push(gInfo);
+        return true;
+    },
+
+
     createGoods:function(){
         this.allGoodsList.push(
             {url:'http://www.d9js.com/ProductImages/Pd_201006182310290000067_s.jpg',
                 label:'xxxxx',
                 price:Math.floor(Math.random()*100),
-                gId:Math.floor(Math.random()*9999)
+                gId:util.createGid()
             }
         );
         this.allGoodsList.push(
             {url:'http://www.d9js.com/ProductImages/Pd_201006182310290000067_s.jpg',
                 label:'xxxxx',
                 price:Math.floor(Math.random()*100),
-                gId:Math.floor(Math.random()*9999)
+                gId:util.createGid()
             }
         );
         this.allGoodsList.push(
             {url:'http://www.d9js.com/ProductImages/Pd_201006182310290000067_s.jpg',
                 label:'xxxxx',
                 price:Math.floor(Math.random()*100),
-                gId:Math.floor(Math.random()*9999)
+                gId:util.createGid()
             }
         );
 
@@ -66,21 +77,21 @@ D_MANAGE.prototype = {
             {url:'http://www.d9js.com/ProductImages/Pd_201006182310290000067_s.jpg',
                 label:'xxxxx',
                 price:Math.floor(Math.random()*100),
-                gId:Math.floor(Math.random()*9999)
+                gId:util.createGid()
             }
         );
         this.recommendList.push(
             {url:'http://www.d9js.com/ProductImages/Pd_201006182310290000067_s.jpg',
                 label:'xxxxx',
                 price:Math.floor(Math.random()*100),
-                gId:Math.floor(Math.random()*9999)
+                gId:util.createGid()
             }
         );
         this.recommendList.push(
             {url:'http://www.d9js.com/ProductImages/Pd_201006182310290000067_s.jpg',
                 label:'xxxxx',
                 price:Math.floor(Math.random()*100),
-                gId:Math.floor(Math.random()*9999)
+                gId:util.createGid()
             }
         );
 
