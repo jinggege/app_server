@@ -13,12 +13,11 @@ var GL_INDEX = function(){};
 var instance = null;
 GL_INDEX.prototype = {
     getControl:function*(){
-
         var dataM = single.getSingleClass(single.getCKEY().DATA_MANAGE);
 
         var renderData = {};
         renderData.STATIC_DOMAIN = global.appConfig.app_static_domain;
-        renderData.allGoodsList = dataM.getAllGoods();
+        renderData.allGoodsList  = dataM.getAllGoods();
         renderData.recommendList = dataM.getRecommendList();
        this.body = yield render('gl_index', renderData);
     }
