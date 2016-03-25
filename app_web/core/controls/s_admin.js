@@ -17,6 +17,8 @@ GL_Admin.prototype = {
         var actionType = query.ac;
         var gId = query.gid;
 
+        console.log('------',actionType);
+
         var resp = {};
         switch(actionType){
             case 'gdel':
@@ -39,6 +41,10 @@ GL_Admin.prototype = {
                     resp.response = increaseFlag? {data:'inscrease success',code:0,msg:'success'} : {data:'',code:1,msg:'fail'};
                     this.body = JSON.stringify(resp);
 
+                break;
+
+            case 'page':
+                this.body = yield render('gl_admin_nav', {});
                 break;
 
             default :

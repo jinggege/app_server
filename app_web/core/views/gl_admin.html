@@ -10,16 +10,32 @@
     <title></title>
 </head>
 
-<div class="admin-nav-right">
-    <table class="data-list">
-        {% for key, val in allGoodsList %}
-        <tr class="row-style-{{  Number(key)%2 }}">
-            <td class="g-id">{{val['gId']}}</td>
-            <td class="g-label">{{val['label']}}</td> <td><span class="goods-btn-del" gid="{{val['gId']}}">del</span></td>
-        </tr>
-        {% endfor %}
-    </table>
-</div>
+<body>
+
+    <div class="admin-nav-con">
+
+    </div>
+
+
+    <div class="admin-con">
+
+        <div class="area-edit-g">
+            <table class="data-list">
+                {% for key, val in allGoodsList %}
+                <tr class="row-style-{{  Number(key)%2 }}">
+                    <td class="g-id">{{val['gId']}}</td>
+                    <td class="g-label">{{val['label']}}</td> <td><span class="goods-btn-del" gid="{{val['gId']}}">del</span></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+
+    </div>
+
+</body>
+
+
 
 
 <script>
