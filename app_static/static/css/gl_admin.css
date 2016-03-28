@@ -92,3 +92,16 @@ span{display: block;}
     background-color: #cccccc;
 }
 
+
+
+/*== ====== admin_config============*/
+
+.admin-config{
+    width: 800px;
+    height: 100%;
+    margin: 0 0 0 160px;
+}
+
+.admin-config .con-config {
+    border: 1px solid #606460;
+}
