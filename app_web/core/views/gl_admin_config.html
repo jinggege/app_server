@@ -4,19 +4,38 @@
 {% include 'gl_admin_nav.html' %}
 
 <div class="admin-config">
-    <div class="con-config">
+    <div class="con-config-web">
         <table>
             <tr>
-                <td>header url</td> <td class="config-in"><input type="text"></td><td><span>提交</span></td>
+                <td>header url</td> <td class="config-in"><input type="text"></td><td><span class="btn-sub">提交</span></td>
             </tr>
             <tr>
-                <td>footer url</td> <td class="config-in"><input type="text"></td><td><span>提交</span></td>
+                <td>footer url</td> <td class="config-in"><input type="text"></td><td><span class="btn-sub">提交</span></td>
             </tr>
         </table>
     </div>
 
+    <div class="con-config-menu">
+        <span class="">菜单编辑</span>
+        <div class="btn-p"></div>
+    </div>
+
 
 </div>
+
+
+<script>
+    var classPath = [
+        'http://10.155.11.94/static/js/libs/button_pull.js'
+    ];
+    seajs.use(classPath,function(BP){
+        BP.init('.btn-p');
+        BP.setData(['EEE','AAA','CCCC','FFFFF']);
+    })
+
+
+</script>
+
 
 </body>
 </html>
