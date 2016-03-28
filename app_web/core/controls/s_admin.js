@@ -25,8 +25,8 @@ GL_Admin.prototype = {
                 this.body = JSON.stringify(resp);
                 break;
             case 'gin':
-                    var gInfo = {};
-                    gInfo.url = query.url;
+                    var gInfo   = {};
+                    gInfo.url   = query.url;
                     gInfo.label = query.label;
                     gInfo.price = query.price;
 
