@@ -26,8 +26,8 @@
       <file leaf-file-name="gl_admin.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_static/static/css/gl_admin.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.0" vertical-offset="4020" max-vertical-offset="4752">
-              <caret line="210" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="210" selection-end-column="0" />
+            <state vertical-scroll-proportion="-24.0" vertical-offset="2590" max-vertical-offset="3322">
+              <caret line="145" column="0" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -46,8 +46,8 @@
       <file leaf-file-name="gl_admin_config.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_web/core/views/gl_admin_config.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.774194" vertical-offset="264" max-vertical-offset="1012">
-              <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+            <state vertical-scroll-proportion="-11.354838" vertical-offset="0" max-vertical-offset="1012">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -56,13 +56,23 @@
       <file leaf-file-name="button_pull.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app_static/static/js/libs/button_pull.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.590164" vertical-offset="1670" max-vertical-offset="3168">
-              <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.5491803" vertical-offset="2524" max-vertical-offset="3256">
+              <caret line="133" column="0" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <marker date="1459160252232" expanded="true" signature="1715:1725" placeholder="..." />
-                <marker date="1459160252232" expanded="true" signature="2463:2479" placeholder="..." />
+                <marker date="1459162256583" expanded="true" signature="1748:1758" placeholder="..." />
+                <marker date="1459162256583" expanded="true" signature="2600:2616" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="component.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app_static/static/css/component.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="739" max-vertical-offset="1496">
+              <caret line="51" column="38" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -77,8 +87,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app_web/core/controls/c_joinroom.js" />
-        <option value="$PROJECT_DIR$/app_web/core/controls/gl-index.js" />
         <option value="$PROJECT_DIR$/app_web/core/views/gl-index.html" />
         <option value="$PROJECT_DIR$/app_web/core/controls/gl_index.js" />
         <option value="$PROJECT_DIR$/app_static/static/js/libs/moduleconfig.js" />
@@ -122,11 +130,13 @@
         <option value="$PROJECT_DIR$/app_web/core/data/data_manage.js" />
         <option value="$PROJECT_DIR$/app_web/core/views/gl_admin_edit_goods.html" />
         <option value="$PROJECT_DIR$/app_web/core/views/gl_admin_nav.html" />
-        <option value="$PROJECT_DIR$/app_web/core/views/gl_admin_header.html" />
         <option value="$PROJECT_DIR$/app_web/core/views/gl_admin.html" />
         <option value="$PROJECT_DIR$/app_web/core/controls/s_admin.js" />
         <option value="$PROJECT_DIR$/app_web/core/views/gl_admin_config.html" />
+        <option value="$PROJECT_DIR$/app_static/static/css/component.css.html" />
         <option value="$PROJECT_DIR$/app_static/static/css/gl_admin.css" />
+        <option value="$PROJECT_DIR$/app_web/core/views/gl_admin_header.html" />
+        <option value="$PROJECT_DIR$/app_static/static/css/component.css" />
         <option value="$PROJECT_DIR$/app_static/static/js/libs/button_pull.js" />
       </list>
     </option>
@@ -525,13 +535,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app_web/admin/controls/c_admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.04761905" vertical-offset="294" max-vertical-offset="924">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_web/node_modules/only/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11978222" vertical-offset="0" max-vertical-offset="551">
@@ -814,14 +817,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_web/core/views/gl_admin_header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.677419" vertical-offset="0" max-vertical-offset="308">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_web/core/views/gl_admin_nav.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7084079" vertical-offset="0" max-vertical-offset="682">
@@ -878,30 +873,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app_web/core/views/gl_admin_header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15151516" vertical-offset="0" max-vertical-offset="726">
+          <caret line="5" column="71" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app_web/core/views/gl_admin_config.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.774194" vertical-offset="264" max-vertical-offset="1012">
-          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+        <state vertical-scroll-proportion="-11.354838" vertical-offset="0" max-vertical-offset="1012">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app_static/static/css/gl_admin.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.0" vertical-offset="4020" max-vertical-offset="4752">
-          <caret line="210" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="210" selection-end-column="0" />
+        <state vertical-scroll-proportion="-24.0" vertical-offset="2590" max-vertical-offset="3322">
+          <caret line="145" column="0" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_static/static/css/component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="739" max-vertical-offset="1496">
+          <caret line="51" column="38" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app_static/static/js/libs/button_pull.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.590164" vertical-offset="1670" max-vertical-offset="3168">
-          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.5491803" vertical-offset="2524" max-vertical-offset="3256">
+          <caret line="133" column="0" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1459160252232" expanded="true" signature="1715:1725" placeholder="..." />
-            <marker date="1459160252232" expanded="true" signature="2463:2479" placeholder="..." />
+            <marker date="1459162256583" expanded="true" signature="1748:1758" placeholder="..." />
+            <marker date="1459162256583" expanded="true" signature="2600:2616" placeholder="..." />
           </folding>
         </state>
       </provider>

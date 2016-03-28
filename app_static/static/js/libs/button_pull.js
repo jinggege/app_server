@@ -69,14 +69,12 @@
  */
 
 
-
-
 define(function(require,exports,module){
     var $ = require('JQ');
     var ButtonPull = function(){};
 
-    var CN_HideOrShow = 'com-btn-pb-itempanel';
-
+    var CN_HideOrShowPanel = 'com-btn-pb-itempanel';
+    var CN_SeclectLabel    = 'com-btn-pb-label';
 
     ButtonPull.prototype = {
         init:function(domClassName){
@@ -87,32 +85,35 @@ define(function(require,exports,module){
         createDom:function(){
             var html = [
                 '<div class="com-btn-pb-con">',
-                    '<span class="com-btn-pb-label">AAAAA</span>',
+                    '<span class="#SL"></span>',
                     '<span class="com-btn-pb-btn" >BTN</span>',
                     '<div style="clear:both"></div>',
                     '<div class="#HOS"></div>',
                 '</div>'
             ].join('');
 
-            html = html.replace('#HOS',CN_HideOrShow);
+            html = html.replace('#HOS',CN_HideOrShowPanel);
+            html = html.replace('#SL',CN_SeclectLabel);
 
             this.parentDom.append($(html));
 
             $('.com-btn-pb-btn').on('click',function(event){
-                var target = $('.com-btn-pb-itempanel');
-                console.log(target);
+                var target = $('.'+CN_HideOrShowPanel);
                 var showFlag = target.css('display') =='block'? 'none' : 'block';
-                $('.'+CN_HideOrShow).css('display',showFlag);
+                $('.'+CN_HideOrShowPanel).css('display',showFlag);
             });
         },
 
         setData:function(arr){
-            var container = $('.com-btn-pb-itempanel');
+            var container = $('.'+CN_HideOrShowPanel);
+
+            var val = arr[0];
+            $('.'+CN_SeclectLabel).text(val);
 
             var html = '<ul>';
             for(var i=0; i<arr.length; i++){
                 html +=  '<li style="list-style: none">';
-                    html += '<span class="box-menu-item" data="'+arr[i]+'" >';
+                    html += '<span class="com-btn-pb-item" data="'+arr[i]+'" >';
                         html += arr[i];
                     html += '</span>';
                 html += '</li>';
@@ -121,16 +122,19 @@ define(function(require,exports,module){
             html += '</ul>';
             container.append($(html));
 
-            $('.box-menu-item').on('click',function(event){
-                var val = $(event.target).attr('data');
-                $('.com-btn-pb-label').text(val);
-                $('.'+CN_HideOrShow).css('display','none');
+            var _this = this;
+
+            $('.com-btn-pb-item').on('click',function(event){
+                val = $(event.target).attr('data');
+                $('.'+CN_SeclectLabel).text(val);
+                _this.hideItem();
             });
 
+        },
 
+        hideItem:function(){
+            $('.'+CN_HideOrShowPanel).css('display','none');
         }
-
-
 
     };
 
