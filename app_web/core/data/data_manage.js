@@ -29,9 +29,7 @@ D_MANAGE.prototype = {
     },
 
     getRecommendList:function(){
-
         var recList = [];
-
         for(var i=0; i<this.allGoodsList.length; i++){
             if(this.allGoodsList[i].rec == 1){
                 var obj = this.allGoodsList[i];

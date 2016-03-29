@@ -24,7 +24,8 @@ define(function(require,exports,module){
                         },
                         function(data,status){
                             console.log(data,status);
-                            location.href = '/gl_index';
+                            //改由服务端跳转
+                           // location.href = '/gl_index';
                         }
                     );
 

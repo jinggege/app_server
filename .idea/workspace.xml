@@ -33,22 +33,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="s_admin.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="s_admin.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app_web/core/controls/s_admin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="858" max-vertical-offset="1562">
-              <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.605178" vertical-offset="726" max-vertical-offset="1584">
+              <caret line="50" column="58" selection-start-line="50" selection-start-column="58" selection-end-line="50" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data_manage.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="s_login.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app_web/core/controls/s_login.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="219" max-vertical-offset="1012">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="data_manage.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_web/core/data/data_manage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.66978925" vertical-offset="660" max-vertical-offset="2266">
-              <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="132" max-vertical-offset="2222">
+              <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gl_admin_eg.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app_static/static/js/gl/gl_admin_eg.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="462" max-vertical-offset="1562">
+              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#40#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -77,8 +99,6 @@
         <option value="$PROJECT_DIR$/app_web/core/views/header.html" />
         <option value="$PROJECT_DIR$/app_web/core/controls/gl_login.js" />
         <option value="$PROJECT_DIR$/app_web/core/views/gl_login.html" />
-        <option value="$PROJECT_DIR$/app_web/core/controls/s_login.js" />
-        <option value="$PROJECT_DIR$/app_static/static/js/gl/gl_login.js" />
         <option value="$PROJECT_DIR$/app_static/static/css/gl_skin.css" />
         <option value="$PROJECT_DIR$/app_web/core/views/gl_detail.html" />
         <option value="$PROJECT_DIR$/app_static/static/css/gl_detail.css" />
@@ -96,7 +116,6 @@
         <option value="$PROJECT_DIR$/app_web/core/views/gl_allgoods.html" />
         <option value="$PROJECT_DIR$/app_web/core/controls/gl_admin_allgoods.js" />
         <option value="$PROJECT_DIR$/app_web/core/controls/gl_admin.js" />
-        <option value="$PROJECT_DIR$/app_web/core/controls/control_manage.js" />
         <option value="$PROJECT_DIR$/app_web/core/controls/s_index.js" />
         <option value="$PROJECT_DIR$/app_web/core/lib/trace.js" />
         <option value="$PROJECT_DIR$/app_web/core/lib/util.js" />
@@ -111,9 +130,12 @@
         <option value="$PROJECT_DIR$/app_static/static/js/gl/gl_admin.js" />
         <option value="$PROJECT_DIR$/app_static/static/css/gl_admin.css" />
         <option value="$PROJECT_DIR$/app_web/core/views/gl_admin_eg.html" />
-        <option value="$PROJECT_DIR$/app_static/static/js/gl/gl_admin_eg.js" />
-        <option value="$PROJECT_DIR$/app_web/core/controls/s_admin.js" />
         <option value="$PROJECT_DIR$/app_web/core/data/data_manage.js" />
+        <option value="$PROJECT_DIR$/app_web/core/controls/s_admin.js" />
+        <option value="$PROJECT_DIR$/app_web/core/controls/control_manage.js" />
+        <option value="$PROJECT_DIR$/app_static/static/js/gl/gl_admin_eg.js" />
+        <option value="$PROJECT_DIR$/app_static/static/js/gl/gl_login.js" />
+        <option value="$PROJECT_DIR$/app_web/core/controls/s_login.js" />
       </list>
     </option>
   </component>
@@ -470,7 +492,7 @@
     <editor active="true" />
     <layout>
       <window_info id="变化" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42091838" sideWeight="0.49963155" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17729592" sideWeight="0.49963155" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22164567" sideWeight="0.49923897" order="0" side_tool="false" content_ui="combo" />
@@ -650,13 +672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_web/core/controls/s_login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6111111" vertical-offset="198" max-vertical-offset="770">
-          <caret line="24" column="5" selection-start-line="12" selection-start-column="4" selection-end-line="24" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_static/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3911111" vertical-offset="0" max-vertical-offset="1364">
@@ -668,21 +683,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.2135923" vertical-offset="13" max-vertical-offset="924">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_web/core/controls/control_manage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36902484" vertical-offset="489" max-vertical-offset="1012">
-          <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_static/static/js/gl/gl_login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5247019" vertical-offset="0" max-vertical-offset="924">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -712,21 +712,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22680412" vertical-offset="0" max-vertical-offset="582">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_web/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.19322033" vertical-offset="356" max-vertical-offset="946">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_web/core/controls/s_index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="66" max-vertical-offset="748">
-          <caret line="6" column="57" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -842,32 +827,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_static/static/css/gl_admin.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.88" vertical-offset="1802" max-vertical-offset="3784">
-          <caret line="92" column="16" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_web/core/controls/s_admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="858" max-vertical-offset="1562">
-          <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_static/static/js/gl/gl_admin_eg.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70088494" vertical-offset="528" max-vertical-offset="1562">
-          <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_web/core/views/gl_admin_eg.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25335893" vertical-offset="0" max-vertical-offset="946">
@@ -876,10 +835,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app_web/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.15855856" vertical-offset="330" max-vertical-offset="946">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_static/static/css/gl_admin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.88" vertical-offset="1802" max-vertical-offset="3784">
+          <caret line="92" column="16" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_web/core/controls/control_manage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5524257" vertical-offset="263" max-vertical-offset="1034">
+          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_web/core/controls/s_index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20657277" vertical-offset="0" max-vertical-offset="748">
+          <caret line="6" column="57" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_static/static/js/gl/gl_login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7162791" vertical-offset="66" max-vertical-offset="990">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_web/core/controls/s_login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="219" max-vertical-offset="1012">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app_web/core/data/data_manage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.66978925" vertical-offset="660" max-vertical-offset="2266">
-          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="132" max-vertical-offset="2222">
+          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_static/static/js/gl/gl_admin_eg.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="740" max-vertical-offset="1562">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_web/core/controls/s_admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.605178" vertical-offset="726" max-vertical-offset="1584">
+          <caret line="50" column="58" selection-start-line="50" selection-start-column="58" selection-end-line="50" selection-end-column="58" />
           <folding />
         </state>
       </provider>

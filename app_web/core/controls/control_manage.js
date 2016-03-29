@@ -26,11 +26,12 @@ C_MANAGE.prototype = {
 
        for(var i=0; i<controlList.length; i++){
            var obj = controlList[i];
+           //==get===
            app.use(route.get(obj.route,obj.control));
+           //==post==
+           app.use(route.post(obj.route,obj.control));
        }
 
-        //==post==
-        app.use(route.post('/gl_login',s_login.getControl));
     },
     addControlToList:function(key,route,control){
         controlList.push({name:key,route:route,control:control});
