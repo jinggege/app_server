@@ -50,13 +50,13 @@ span{display: block;}
 
 
 
-.admin-con{
+.admin-g-con{
     width: 100%;
     height: 100%;
     margin: 0 0 0 155px;
 }
 
-.admin-con .area-edit-g{
+.admin-g-con .admin-g-edit{
     width: 500px;
     height: 100%;
     background-color: #f9f9f9;
@@ -65,7 +65,7 @@ span{display: block;}
 
 
 
-.data-list .goods-btn-del{
+.admin-g-list .goods-btn-del{
     width: 50px;
     height: 25px;
     line-height: 25px;
@@ -76,7 +76,7 @@ span{display: block;}
     margin: auto;
 }
 
-.data-list td{
+.admin-g-list td{
     width: 100px;
     border: 1px solid #e8e8e8;
     text-align: center;
@@ -84,11 +84,32 @@ span{display: block;}
     font-weight: bold;
 }
 
-.row-style-0{
+.admin-g-list .g-edit-rec{
+    width: 50px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    cursor: pointer;
+    margin: auto;
+}
+
+.admin-g-list .g-rec-0{
+    background-color: #DDDDDD;
+    color:#CCCCCC;
+}
+
+.admin-g-list .g-rec-1{
+    background-color: #FF3333;
+    color:#FFFFFF;
+}
+
+
+
+.admin-g-listrow-0{
     background-color: #e3e3e3;
 }
 
-.row-style-1{
+.admin-g-listrow-1{
     background-color: #cccccc;
 }
 

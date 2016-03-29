@@ -1,0 +1,38 @@
+{% include 'gl_admin_header.html' %}
+</head>
+<body>
+
+    {% include 'gl_admin_nav.html' %}
+
+    <div class="admin-g-con">
+        <div class="admin-g-edit">
+            <table class="admin-g-list">
+                {% for key, val in allGoodsList %}
+                <tr class="admin-g-listrow-{{  Number(key)%2 }}">
+                    <td class="g-id">{{val['gId']}}</td>
+                    <td class="g-label">{{val['label']}}</td>
+                    <td><span class="goods-btn-del" gid="{{val['gId']}}">del</span></td>
+                    <td><span class="g-edit-rec g-rec-{{val['rec']}}" gid="{{val['gId']}}"  rec="{{val['rec']}}">推荐</span></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+    </div>
+
+</body>
+
+
+
+
+<script>
+    var classPaths = ['{{STATIC_DOMAIN}}/static/js/gl/gl_admin_eg.js'];
+    seajs.use(classPaths,function(GM){
+        GM.init();
+    })
+
+
+</script>
+
+
+</html>

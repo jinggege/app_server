@@ -2,7 +2,7 @@
  * Created by dell on 2016/3/24.
  */
 
-var url          = require("url");
+var url         = require("url");
 var render      = require(global.rootUrl+'/lib/render.js');
 var single      = require(global.rootUrl+'/lib/singleclass.js');
 
@@ -30,7 +30,6 @@ GL_Admin.prototype = {
                     gInfo.url   = query.url;
                     gInfo.label = query.label;
                     gInfo.price = query.price;
-
                     //todo 需要改为异步操作
                     var increaseFlag = dataM.increaseGood(gInfo);
                     resp.response   = increaseFlag? {data:'inscrease success',code:0,msg:'success'} : {data:'',code:1,msg:'fail'};
@@ -38,14 +37,24 @@ GL_Admin.prototype = {
                 break;
 
             case'config':
-                renderData.allGoodsList  = dataM.getAllGoods();
                 renderData.STATIC_DOMAIN = global.appConfig.app_static_domain;
                 this.body = yield render('gl_admin_config', renderData);
+                break;
+            case'allg':
+                renderData.allGoodsList  = dataM.getAllGoods();
+                renderData.STATIC_DOMAIN = global.appConfig.app_static_domain;
+                this.body = yield render('gl_admin_eg', renderData);
+                break;
+            case'recg':
+                var rec = query.rec;
+                dataM.setRecommendStatus(gId,Number(rec));
+                renderData.STATIC_DOMAIN = global.appConfig.app_static_domain;
+                this.body = yield render('gl_admin_eg', renderData);
                 break;
             default :
                 renderData.allGoodsList  = dataM.getAllGoods();
                 renderData.STATIC_DOMAIN = global.appConfig.app_static_domain;
-                this.body = yield render('gl_admin', renderData);
+                this.body = yield render('gl_admin_config', renderData);
                 break;
         }//end switch
 
